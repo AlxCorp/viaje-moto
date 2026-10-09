@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pirineo y País Vasco francés en moto · 13–19 oct 2026</title>
+<meta name="description" content="Libro de ruta del viaje en moto: Barcelona, Andorra, puertos del Tour, País Vasco francés y Zugarramurdi.">
+<meta name="theme-color" content="#1E2A2F">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1EC; --paper-2:#E3E8E3; --ink:#1E2A2F; --muted:#56666C; --rule:#C6CFCA;
+  --col:#F2C200; --col-ink:#2A2300; --eus:#C8102E; --eus-g:#00843D; --link:#245E8C;
+  --cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#162024;--paper-2:#1E2A2F;--ink:#E4EBE7;--muted:#9AABB0;--rule:#2F3D42;--link:#8CC2EC;--eus:#FF5A6E;--eus-g:#3FCB7E}
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--body)}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--col);outline-offset:2px}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:var(--cond);line-height:1.05;margin:0}
+h2{font-size:2rem;font-weight:700;margin:0 0 .4rem}
+h3{font-size:1.35rem;font-weight:600;margin:1.2rem 0 .4rem}
+p{margin:.5rem 0 .8rem;max-width:68ch}
+.lead{font-size:1.08rem;max-width:62ch}
+.muted{color:var(--muted)}
+section{padding:44px 0 8px;border-top:1px solid var(--rule)}
+
+/* Header */
+header{padding:28px 0 0}
+.title{font-size:clamp(2.4rem,8vw,4.4rem);font-weight:700;letter-spacing:-.01em}
+.dates{font-family:var(--cond);font-size:1.4rem;font-weight:500;color:var(--muted);margin:.3rem 0 0}
+.profile{margin:22px 0 0;position:relative}
+.profile svg{width:100%;height:auto;display:block}
+.profile figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
+.marker-col{fill:var(--col);stroke:var(--ink);stroke-width:1.2}
+.marker-eus{fill:var(--eus)}
+.axis{stroke:var(--rule);stroke-width:1}
+.plab{font:600 12px var(--cond);fill:var(--ink)}
+.plab-s{font:500 11px var(--cond);fill:var(--muted)}
+
+/* Nav */
+nav.top{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px);margin-top:20px}
+nav.top .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.top .wrap::-webkit-scrollbar{display:none}
+nav.top a{flex:none;font:600 1rem var(--cond);text-decoration:none;color:var(--ink);padding:6px 10px;border-radius:6px}
+nav.top a:hover{background:var(--paper-2)}
+nav.top a.today{background:var(--col);color:var(--col-ink)}
+
+/* Quick table */
+.tbl{overflow-x:auto;margin:12px 0 18px;border:1px solid var(--rule);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:560px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:600 .95rem var(--cond);color:var(--muted);background:var(--paper-2)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--cond);font-weight:600;white-space:nowrap}
+tr.is-today td{background:color-mix(in srgb,var(--col) 22%,transparent)}
+.must{color:var(--eus);font-weight:600}
+
+/* Callouts */
+.flag{border-left:6px solid var(--eus);padding:10px 14px;background:var(--paper-2);border-radius:0 8px 8px 0;margin:14px 0}
+.flag.green{border-color:var(--eus-g)}
+.flag.yellow{border-color:var(--col)}
+
+/* Day tabs */
+.daytabs{display:flex;gap:6px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none}
+.daytabs button{flex:none;font:600 1rem var(--cond);border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:6px;padding:7px 12px;cursor:pointer}
+.daytabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.daytabs button.today::after{content:" · hoy";color:var(--col)}
+.day{display:none}
+.day.active{display:block}
+.dayhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:8px 0 4px}
+.dayhead h3{margin:0;font-size:1.8rem}
+.km{font:700 1.6rem var(--cond)}
+.route{font-size:1.02rem;padding:10px 0;border-top:1px dashed var(--rule);border-bottom:1px dashed var(--rule);margin:8px 0 12px}
+.route b{font-weight:600}
+dl.facts{display:grid;grid-template-columns:minmax(110px,max-content) 1fr;gap:8px 16px;margin:0}
+dl.facts dt{font:600 1rem var(--cond);color:var(--muted)}
+dl.facts dd{margin:0}
+dl.facts ul{margin:0;padding-left:18px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.btn{display:inline-flex;align-items:center;gap:6px;font:600 1rem var(--cond);text-decoration:none;border-radius:6px;padding:9px 14px;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer}
+.btn.primary{background:var(--col);border-color:var(--col);color:var(--col-ink)}
+
+/* Km tool */
+.kmtool{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:12px 0}
+.kmtool label{display:block;font:600 .95rem var(--cond);color:var(--muted);margin-bottom:4px}
+.kmtool input{width:100%;font:600 1.3rem var(--cond);padding:8px 10px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.gauge{height:14px;border-radius:7px;background:var(--paper-2);border:1px solid var(--rule);overflow:hidden;margin:8px 0}
+.gauge i{display:block;height:100%;width:0;background:var(--eus-g);transition:width .3s}
+.gauge.warn i{background:var(--col)}
+.gauge.over i{background:var(--eus)}
+.kmout{font:600 1.15rem var(--cond)}
+
+/* Checklist */
+.check{list-style:none;padding:0;margin:8px 0 16px}
+.check li{padding:6px 0;border-bottom:1px solid var(--rule)}
+.check label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.check input{width:20px;height:20px;margin-top:3px;accent-color:var(--eus-g);flex:none}
+.check input:checked + span{color:var(--muted);text-decoration:line-through}
+
+footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--rule);margin-top:40px}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .profile{overflow-x:auto}
+  .profile svg{min-width:680px}
+  #quick{min-width:0}
+  #quick td:nth-child(4),#quick th:nth-child(4){display:none}
+  dl.facts{grid-template-columns:1fr}
+  dl.facts dt{margin-top:6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{
+  nav.top,.daytabs,.btns,.kmtool,.noprint{display:none!important}
+  .day{display:block!important;break-inside:avoid;margin-bottom:18px}
+  section{padding-top:18px}
+  body{background:#fff;color:#000;font-size:12pt}
+  .tbl{overflow:visible}
+  table{min-width:0}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <h1 class="title">Pirineo y País Vasco francés en moto</h1>
+  <p class="dates">13–19 de octubre de 2026 · 5 días de moto · ~1.341 km</p>
+  <figure class="profile" aria-label="Perfil de altitud del recorrido">
+    <svg id="profile" viewBox="0 0 900 230" role="img"></svg>
+    <figcaption>Perfil aproximado de altitud a lo largo de la ruta. En amarillo, los puertos; en rojo, Zugarramurdi.</figcaption>
+  </figure>
+</header>
+
+<nav class="top" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#hoy" id="todayLink" class="today">Hoy</a>
+    <a href="#resumen">Resumen</a>
+    <a href="#dias">Días</a>
+    <a href="#apie">A pie</a>
+    <a href="#comer">Comer</a>
+    <a href="#lluvia">Lluvia</a>
+    <a href="#tiempo">Tiempo</a>
+    <a href="#escapes">Escapes</a>
+    <a href="#zugarramurdi">Zugarramurdi</a>
+    <a href="#dormir">Dormir</a>
+    <a href="#km">Km</a>
+    <a href="#moto">Moto</a>
+    <a href="#navegacion">Navegación</a>
+    <a href="#presupuesto">Presupuesto</a>
+    <a href="#pendientes">Pendientes</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="resumen" style="border-top:0">
+  <h2>Resumen</h2>
+  <p class="lead">Bucle desde Segur de Calafell, donde está la Benelli TRK 502 X amarilla: Andorra, los puertos del Tour, el País Vasco francés y Zugarramurdi, con vuelta por Navarra y Aragón. Unos 1.341 km; la moto incluye 1.500 (300 al día, ampliados por 100 €), así que no hay km extra. Total aproximado: 815–850 €.</p>
+  <div class="tbl">
+    <table id="quick">
+      <thead><tr><th>Día</th><th>Etapa</th><th>Km</th><th>Noche</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="flag"><b class="must">Innegociable:</b> Zugarramurdi y las brujas. Hay dos ventanas de visita, el viernes por la tarde o el sábado por la mañana, y todas las vías de escape las respetan.</div>
+  <div class="flag yellow"><b>Prescindible si no queda otra:</b> Andorra (lo primero), Aspin, Espelette y Ainhoa, la selva de Irati y San Juan de Luz.</div>
+  <div class="btns">
+    <a class="btn primary" href="Viaje_moto_Pirineo_Pais_Vasco_13-19_oct_2026.pdf" download>Descargar PDF</a>
+    <button class="btn" type="button" onclick="window.print()">Imprimir esta página</button>
+  </div>
+</section>
+
+<section id="dias">
+  <span id="hoy"></span>
+  <h2>Día a día</h2>
+  <p>Regla general: llegar antes de las 18:30. Anochece hacia las 19:10 en Barcelona y las 19:30 en el País Vasco. Distancias y horas aproximadas.</p>
+  <div class="daytabs" role="tablist" id="daytabs"></div>
+  <div id="days"></div>
+</section>
+
+<section id="apie">
+  <h2>Al soltar la moto: qué ver andando</h2>
+  <p class="lead">Regla fija: la moto, aparcada como muy tarde a las 18:00, más de una hora antes de que anochezca. Si un día vas a pasar de esa hora, aplica la vía de escape de ese día; nada de rodar de noche.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Noche</th><th>Llegada prevista</th><th>Hora límite</th><th>Anochece</th><th>Qué ver andando</th></tr></thead>
+      <tbody>
+        <tr><td>Mié 14 · Foix</td><td class="num">17:00–17:30</td><td class="num">18:00</td><td class="num">~19:15</td><td>Casco medieval, castillo desde fuera, Pont Vieux</td></tr>
+        <tr><td>Jue 15 · Luz-Saint-Sauveur</td><td class="num">16:30</td><td class="num">18:00</td><td class="num">~19:20</td><td>Iglesia de los Templarios, Pont Napoléon</td></tr>
+        <tr><td>Vie 16 · Sare</td><td class="num">16:00</td><td class="num">18:00</td><td class="num">~19:25</td><td>Plaza y frontón, iglesia, casas labortanas</td></tr>
+        <tr><td>Sáb 17 · Jaca</td><td class="num">15:30–17:30</td><td class="num">18:00</td><td class="num">~19:20</td><td>Ciudadela, catedral, calle Mayor</td></tr>
+        <tr><td>Dom 18 · Barcelona</td><td>Moto devuelta hacia las 15:00</td><td>—</td><td>—</td><td>Montjuïc desde Plaza España</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Foix · miércoles (~1 h)</h3>
+  <p>Es el día más justo: come algo rápido en Andorra y respeta el control de las 14:30, así aparcas hacia las 17:00. El castillo abre de 10:00 a 18:00 hasta el 18 de octubre, así que por la tarde no da tiempo a entrar; míralo desde abajo, que es como luce más. Pasea por las callejuelas medievales, la iglesia de Saint-Volusien y el Pont Vieux sobre el Ariège.</p>
+  <h3>Luz-Saint-Sauveur · jueves (~1,5 h)</h3>
+  <p>La iglesia de los Templarios, fortificada y del siglo XII, está en el centro. El Pont Napoléon, sobre la garganta del Gave, queda a unos 20 minutos andando por Saint-Sauveur: buen paseo para estirar las piernas después del Tourmalet.</p>
+  <h3>Sare · viernes (~1 h)</h3>
+  <p>La plaza del frontón con las casas blancas de entramado rojo típicas de Lapurdi y la iglesia de Saint-Martin, con las galerías interiores de madera propias de las iglesias vascas. Si haces Zugarramurdi esa tarde, sales de Sare hacia las 16:15 y vuelves antes de las 18:30, aún de día; el paseo por Sare, después de cenar.</p>
+  <h3>Jaca · sábado (~2 h)</h3>
+  <p>Con el horario normal llegas hacia las 17:30, cerca del límite; por eso la mejor ventana para Zugarramurdi es el viernes por la tarde, y el sábado aparcas en Jaca hacia las 15:30. La Ciudadela, fortaleza en forma de estrella del siglo XVI con museo de miniaturas militares, tiene horario de tarde de 16:00 a 20:00 según las guías: compruébalo y no llegues cerca del cierre. La catedral románica de San Pedro abre por la tarde de 17:00 a 20:00. Completa con la calle Mayor, la Torre del Reloj, las Benedictinas y el paseo de la Constitución con vistas a la Peña Oroel.</p>
+  <h3>Barcelona · domingo</h3>
+  <p>Después de devolver la moto y llegar a Plaza España hacia las 17:00, sube las escaleras del MNAC a Montjuïc para ver la ciudad desde arriba.</p>
+</section>
+
+<section id="comer">
+  <h2>Dónde comer y cenar</h2>
+  <p class="lead">Un sitio por comida, elegido porque está abierto ese día de la semana y queda en ruta o a pie del alojamiento. Horarios de Google a 8 de octubre: confírmalos. Plan B siempre: supermercado o el menú del día del bar más cercano.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Comida</th><th>Dónde</th><th>Abierto ese día</th><th>Por qué</th></tr></thead>
+      <tbody>
+        <tr><td>Mié · comida</td><td>Andorra la Vella</td><td>—</td><td>Bocadillo o algo rápido: hoy no hay tiempo para sentarse</td></tr>
+        <tr><td>Mié · cena</td><td><a href="https://maps.google.com/?cid=5165135529314830802" target="_blank" rel="noopener">La Tasca</a>, Foix</td><td class="num">18:30–23:00</td><td>Cocina portuguesa, ambiente animado, servicio rápido</td></tr>
+        <tr><td>Jue · comida</td><td><a href="https://maps.google.com/?cid=17234600913983725662" target="_blank" rel="noopener">Le Gypaète</a>, Arreau</td><td class="num">11:30–14:30</td><td>Hamburguesas caseras, terraza en el centro con vistas</td></tr>
+        <tr><td>Jue · cena</td><td><a href="https://maps.google.com/?cid=18243942343234176354" target="_blank" rel="noopener">L'Atelier Pizza</a>, Luz</td><td class="num">17:30–24:00</td><td>Solo abre los jueves; pizzas a 15–20 €. Plan B: <a href="https://maps.google.com/?cid=15372275338430135943" target="_blank" rel="noopener">Le Mouton Noir</a> (18:30–22:00), reservando un día antes</td></tr>
+        <tr><td>Vie · comida</td><td><a href="https://auxpyrenees.com/carte-restaurant-oloron/" target="_blank" rel="noopener">Aux Pyrénées</a>, Oloron</td><td class="num">6:00–20:00</td><td>Menú de mediodía de tres platos por unos 16,50 €</td></tr>
+        <tr><td>Vie · cena</td><td><a href="https://maps.google.com/?cid=12067123527475312239" target="_blank" rel="noopener">Pleka</a>, Sare</td><td class="num">19:00–21:00</td><td>Hamburguesas, cerveza local y pelota vasca; o la cena del gîte</td></tr>
+        <tr><td>Sáb · comida</td><td><a href="https://www.hostalorialde.es/es" target="_blank" rel="noopener">Orialde</a>, Ochagavía</td><td class="num">8:00–23:00</td><td>Menú del día con sidra por unos 18 €; abierto todo el día</td></tr>
+        <tr><td>Sáb · cena</td><td><a href="http://www.latascadeana.com/" target="_blank" rel="noopener">La Tasca de Ana</a>, Jaca</td><td class="num">19:00–23:30</td><td>Tapas a buen precio; se llena, ve a la apertura. Al lado: 19 Tapas y 500 Vinos o <a href="https://marborejaca.com/" target="_blank" rel="noopener">Bar Marboré</a> (19:30)</td></tr>
+        <tr><td>Dom · comida</td><td>Lleida o área de servicio</td><td>—</td><td>Parada corta: día de autovía</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Si haces Zugarramurdi el sábado por la mañana:</b> algo rápido en <a href="http://www.graxiana-aterpea.com/" target="_blank" rel="noopener">Graxiana</a> (abre a las 9:00, junto al museo) y la comida fuerte en Orialde, que no cierra a mediodía.</p>
+  <p><b>Para ahorrar:</b> desayuno y algún picnic de supermercado; en Francia, el menú de mediodía sale bastante más barato que cenar a la carta.</p>
+</section>
+
+<section id="lluvia">
+  <h2>Plan de lluvia</h2>
+  <p class="lead">Si llueve, el plan no se cae: se cambian puertos por valles y Zugarramurdi sigue intacta, porque el museo es interior y la cueva es un túnel enorme. Con lluvia cuenta 1–1,5 h más por etapa; los puntos de control de las 14:00–14:30 ya lo tienen en cuenta.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Situación</th><th>Qué hacer</th><th>Efecto en km</th></tr></thead>
+      <tbody>
+        <tr><td>Lluvia floja o intermitente</td><td>Seguir el plan con traje de agua y más despacio</td><td>Igual</td></tr>
+        <tr><td>Lluvia fuerte o niebla el miércoles en Envalira</td><td>Sin Andorra: Cadí → Puigcerdà → Puymorens → Ax → Foix</td><td class="num">−60 km</td></tr>
+        <tr><td>Lluvia fuerte o niebla el jueves</td><td>Valle: Sainte-Marie-de-Campan → Bagnères-de-Bigorre → Lourdes → Argelès → Luz, sin Aspin ni Tourmalet</td><td class="num">~+30 km (cabe en el margen)</td></tr>
+        <tr><td>Lluvia fuerte o niebla el viernes</td><td>Valle: Argelès → Lourdes → Pau → Oloron, sin Soulor ni Aubisque</td><td>Prácticamente igual</td></tr>
+        <tr><td>Lluvia fuerte el sábado</td><td>Zugarramurdi sin prisa (el mejor día para que llueva) y vuelta por Elizondo → Pamplona → A-21 → Jaca, sin Irati</td><td class="num">−70 km</td></tr>
+        <tr><td>Temporal todo un día</td><td>Valle o autovía directo a la siguiente noche, o a Sare si es jueves o viernes</td><td>Pierdes los puertos de ese día, no el viaje</td></tr>
+        <tr><td>Lluvia el domingo</td><td>Autovía tal cual, paradas solo para repostar</td><td>Igual</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flag"><b>No subas a un puerto con niebla cerrada.</b> Arriba no verás nada y es donde más peligro hay. Ese día, valle.</div>
+  <h3>Conducir con lluvia</h3>
+  <ul>
+    <li>Ojo con las líneas pintadas, los pasos de cebra, las tapas de alcantarilla y los raíles: con agua resbalan mucho.</li>
+    <li>En otoño, la hoja caída de los hayedos de Irati y Roncesvalles es lo más resbaladizo de todo el viaje.</li>
+    <li>Las rotondas y las gasolineras suelen tener gasoil en el asfalto: entra suave y en vertical.</li>
+    <li>Frena antes y con más distancia, sin tocar el freno en plena curva.</li>
+    <li>Hazte visible: luces encendidas y algo reflectante encima del traje de agua.</li>
+  </ul>
+  <h3>Equipaje para lluvia</h3>
+  <ul class="check">
+    <li><label><input type="checkbox" data-id="ll-guantes"><span>Guantes de repuesto en bolsa estanca</span></label></li>
+    <li><label><input type="checkbox" data-id="ll-basura"><span>Bolsas de basura dentro de las maletas Givi para la ropa (no siempre son estancas)</span></label></li>
+    <li><label><input type="checkbox" data-id="ll-ropa"><span>Ropa seca para la noche siempre en bolsa estanca</span></label></li>
+    <li><label><input type="checkbox" data-id="ll-movil"><span>Funda impermeable para el móvil</span></label></li>
+    <li><label><input type="checkbox" data-id="ll-periodico"><span>Papel de periódico para secar las botas por la noche</span></label></li>
+  </ul>
+  <h3>Táctica</h3>
+  <ul>
+    <li>Mira el radar de lluvia por la mañana: muchas veces basta con esperar una hora en un café para que pase el chubasco.</li>
+    <li>En los gîtes suele haber sitio para secar la ropa; pregunta al llegar.</li>
+    <li>La Benelli no tiene puños calefactables: con lluvia y frío, los guantes impermeables son lo más importante del equipo.</li>
+  </ul>
+</section>
+
+<section id="tiempo">
+  <h2>Tiempo</h2>
+  <p class="lead">Previsión del 8 de octubre: los dos primeros días de moto pintan secos y templados. Para viernes, sábado y domingo aún no hay previsión; vuelve a mirarla el domingo 11 o el lunes 12.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Fecha</th><th>Andorra la Vella</th><th>Luz-Saint-Sauveur</th><th>Sare</th></tr></thead>
+      <tbody>
+        <tr><td>Lun 12</td><td>6–17 °C · 0 % lluvia</td><td>6–18 °C · 10 %</td><td>13–22 °C · 5 %</td></tr>
+        <tr><td>Mar 13</td><td>8–19 °C · 0 %</td><td>8–20 °C · 5 %</td><td>13–23 °C · 10 %</td></tr>
+        <tr><td><b>Mié 14</b> (Envalira)</td><td>8–19 °C · 10 %</td><td>8–21 °C · 10 %</td><td>15–26 °C · 10 %</td></tr>
+        <tr><td><b>Jue 15</b> (puertos del Tour)</td><td>8–19 °C · 15 %</td><td>9–21 °C · 20 %</td><td>15–25 °C · 15 %</td></tr>
+        <tr><td>Vie 16 – Dom 18</td><td colspan="3" class="muted">Sin previsión todavía</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Lo que implica:</b> el 8 de octubre ha nevado algo en los puertos altos, pero con una semana seca y templada por delante lo normal es que el miércoles y el jueves estén despejados. En Envalira, hacia las 15:00, calcula unos 10 °C; en el Tourmalet, hacia las 15:30, unos 11 °C. A primera hora, cerca de 0 °C en las cotas altas.</p>
+  <p><b>Regla:</b> unos 6–7 °C menos por cada 1.000 m de subida. El Tourmalet suele cerrar del 1 de noviembre al 31 de mayo, pero una nevada temprana puede cerrarlo de forma puntual: consulta la víspera Envalira, Tourmalet y Aubisque.</p>
+  <div class="btns">
+    <a class="btn" target="_blank" rel="noopener" href="https://meteofrance.com">Météo-France</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.aemet.es">AEMET</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q=inforoute+65+cols">Estado de los puertos (Inforoute 65)</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q=inforoute+64+cols">Inforoute 64</a>
+  </div>
+  <div class="flag green"><b>Emergencias:</b> 112 en España, Francia y Andorra. Guarda también el teléfono del dueño de la moto y el de la asistencia en carretera.</div>
+</section>
+
+<section id="escapes">
+  <h2>Vías de escape</h2>
+  <p>Si pierdes tiempo, recorta en este orden: Andorra, Aspin, Espelette y Ainhoa, Irati y San Juan de Luz. El plan siempre llega a Sare el viernes y deja libre el sábado por la mañana para Zugarramurdi. Con 1.500 km incluidos los atajos ya no ahorran dinero, solo tiempo; vigila los desvíos largos, porque el margen es de ~160 km.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Problema</th><th>Cuándo</th><th>Qué hacer</th><th>Efecto</th></tr></thead>
+      <tbody>
+        <tr><td>Recogida tardía o hielo en Envalira</td><td>Mié</td><td>Sin Andorra: Cadí → Puigcerdà → Túnel de Puymorens → Ax → Foix</td><td>−60 km, ~1 h menos</td></tr>
+        <tr><td>Vas tarde en Andorra</td><td>Mié, 14:30</td><td>Dormir en Ax-les-Thermes</td><td>−45 km hoy, +45 mañana</td></tr>
+        <tr><td>Tourmalet cerrado</td><td>Jue</td><td>Valle: Bagnères-de-Bigorre → Lourdes → Argelès → Luz</td><td>Pierdes el puerto, no el día</td></tr>
+        <tr><td>Vas tarde en los puertos</td><td>Jue, 14:30 en Arreau</td><td>Saltar Aspin: Arreau → La Barthe-de-Neste → Bagnères-de-Bigorre → Tourmalet</td><td>~30 min menos</td></tr>
+        <tr><td>Aubisque cerrado</td><td>Vie</td><td>Argelès → Lourdes → Pau → Oloron</td><td>Valle, más rápido</td></tr>
+        <tr><td>Vas tarde hacia Sare</td><td>Vie, 14:00 en Saint-Jean</td><td>Saltar Espelette y Ainhoa, directo a Sare</td><td>~45 min menos</td></tr>
+        <tr><td>Sales tarde de Zugarramurdi o llueve</td><td>Sáb, 13:30</td><td>Elizondo → Pamplona → autovía A-21 → Jaca</td><td>−70 km, ~1,5 h menos</td></tr>
+        <tr><td>Pierdes un día entero (lluvia fuerte, avería)</td><td>Jue o vie</td><td>Directo a Sare por el valle: Foix o Luz → Tarbes → Pau → A64 → Bayona → Sare</td><td>Pierdes los puertos del día, llegas a Sare</td></tr>
+        <tr><td>Vas muy justo el último día</td><td>Dom</td><td>Autovía tal cual; parar solo a repostar</td><td>~4 h de conducción</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flag"><b>Escape de emergencia.</b> Desde Sare o Zugarramurdi: Pamplona → Zaragoza → Lleida → Barcelona por autovía, unos 560 km. Son casi los mismos km que sábado y domingo juntos (~562), pero en un solo día largo: solo si todo se complica.</div>
+</section>
+
+<section id="zugarramurdi">
+  <h2>Zugarramurdi y las brujas</h2>
+  <p class="lead">Dos ventanas de visita, ambas dentro de los horarios de octubre: viernes 16 por la tarde (si llegas a Sare antes de las 16:30) o sábado 17 por la mañana. Cuenta unas 2 horas para museo y cueva.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Lugar</th><th>Viernes 16</th><th>Sábado 17</th><th>Notas</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.turismozugarramurdi.com/museo-de-las-brujas/" target="_blank" rel="noopener">Museo de las Brujas</a></td><td class="num">10:30–18:00</td><td class="num">10:30–18:30</td><td>Cerrado lunes y martes en octubre</td></tr>
+        <tr><td><a href="https://www.turismozugarramurdi.com/cueva-de-zugarramurdi/" target="_blank" rel="noopener">Cueva de Zugarramurdi</a></td><td class="num">hasta 18:00</td><td class="num">hasta 18:30</td><td>Última entrada una hora antes del cierre</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Empieza por el museo para entender la historia y luego baja a la cueva. La cueva es un túnel kárstico de unos 120 m excavado por el arroyo de la Regata del Infierno, a unos 500 m del pueblo, y la tradición la sitúa como escenario de los akelarres.</p>
+  <p>A comienzos del siglo XVII la Inquisición juzgó a vecinos del valle acusados de brujería, en el proceso que acabó en el Auto de Fe de Logroño. El museo cuenta la caza de brujas y la sociedad vasca de la época, incluido el papel de las mujeres herboleras.</p>
+  <p><b>Alrededores:</b> Sare y sus cuevas, las cuevas de Urdax, Ainhoa y las ventas de Dantxarinea para repostar barato. Todo a menos de 15 minutos.</p>
+  <div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cueva+de+las+Brujas+Zugarramurdi">Abrir en Google Maps</a></div>
+</section>
+
+<section id="dormir">
+  <h2>Dónde dormir</h2>
+  <p>Cuatro noches de pago, a unos 22–40 € cada una. Luz-Saint-Sauveur es la más difícil en barato: reserva o llama antes.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Noche</th><th>Lugar</th><th>Opción</th><th>Precio</th><th>Ojo</th></tr></thead>
+      <tbody>
+        <tr><td>Mar 13</td><td>Barcelona</td><td>Casa de una amiga</td><td class="num">0 €</td><td></td></tr>
+        <tr><td>Mié 14</td><td>Foix</td><td><a href="https://www.ariegepyrenees.com/?p=215944" target="_blank" rel="noopener">Auberge du Léo de Foix</a>, en el centro</td><td class="num">~30 €</td><td>Llegadas de 16:00 a 21:00 entre semana. Plan B: hotel económico desde ~48 €</td></tr>
+        <tr><td>Jue 15</td><td>Luz-Saint-Sauveur</td><td>Habitaciones y apartamentos del pueblo</td><td class="num">~26–44 €</td><td>Sin gîte d'étape verificado. Plan B: Argelès-Gazost o Lourdes</td></tr>
+        <tr><td>Vie 16</td><td>Sare</td><td><a href="https://www.gites64.com/Gites-etape-sejour-Sare-Larcabal-Cote-Basque-64G552002.html" target="_blank" rel="noopener">Gîte Haranederea</a>, junto al GR10</td><td class="num">22 €</td><td>En vacaciones escolares francesas cortas se alquila entero: confirma esa noche</td></tr>
+        <tr><td>Sáb 17</td><td>Jaca</td><td><a href="https://www.alberguescaminosantiago.com/camino-aragones/albergue-jaca-hostel-jaca/" target="_blank" rel="noopener">Residencia Albergue Jaca</a> (Av. Perimetral 2)</td><td class="num">por confirmar</td><td>Literas, aparcamiento gratis, 10 min a pie del centro</td></tr>
+        <tr><td>Dom 18</td><td>Barcelona</td><td>Casa de una amiga</td><td class="num">0 €</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Si te pilla la noche fuera de plan:</b> Ax-les-Thermes (mié), Arreau o Bagnères-de-Bigorre (jue), Saint-Jean-Pied-de-Port o Espelette (vie), Pamplona u Ochagavía (sáb). Los albergues de peregrinos de Saint-Jean y el municipal de Jaca son solo para peregrinos con credencial.</p>
+</section>
+
+<section id="km">
+  <h2>Contador de kilómetros</h2>
+  <p>La moto incluye 1.500 km (300 al día, pactados por 100 €). La ruta son ~1.341 km: te sobran ~160. Apunta el cuentakilómetros al recoger y cada noche; se guarda en este navegador.</p>
+  <div class="kmtool">
+    <div><label for="kmStart">Km al recoger</label><input id="kmStart" type="number" inputmode="numeric" placeholder="ej. 13000"></div>
+    <div><label for="kmNow">Km ahora</label><input id="kmNow" type="number" inputmode="numeric" placeholder="ej. 13331"></div>
+    <div><label for="kmPrice">Precio km extra si te pasas (€)</label><input id="kmPrice" type="number" inputmode="decimal" step="0.01" value="0.25"></div>
+  </div>
+  <div class="gauge" id="gauge"><i></i></div>
+  <p class="kmout" id="kmOut">Introduce los kilómetros para ver cuánto llevas y cuánto pagarías de más.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Al final de</th><th>Km del día</th><th>Acumulado previsto</th><th>Quedan de los 1.500</th></tr></thead>
+      <tbody id="kmPlan"></tbody>
+    </table>
+  </div>
+  <p class="muted">Opción A (devolver el lunes en Segur desde Barcelona) suma ~91 km más: ~1.432 km en total, aún dentro de los 1.500 pero con solo ~70 km de margen.</p>
+</section>
+
+<section id="moto">
+  <h2>La moto y cómo llegar</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Qué</th><th>Detalle</th><th>Precio</th></tr></thead>
+      <tbody>
+        <tr><td>Moto</td><td><a href="https://www.momoven.es/alquiler-de-motos/segur-de-calafell/benelli/trk-502-x-11878/1791964800/1792396800" target="_blank" rel="noopener">Benelli TRK 502 X amarilla</a> (2022, 13.000 km, 3 maletas Givi), Momoven, Ronda Sant Miquel de Segur 81, Calafell</td><td class="num">235,44 €</td></tr>
+        <tr><td>Alquiler</td><td>Recogida mié 14 a las 09:00; devolución dom 18 por la tarde (opción B) o lun 19 a primera hora (opción A)</td><td>Seguro básico incluido</td></tr>
+        <tr><td>Km incluidos</td><td>1.500 km (300 km/día), ampliación pactada con el dueño</td><td class="num">100 €</td></tr>
+        <tr><td>Km extra</td><td>Ninguno: la ruta (~1.341 km opción B, ~1.432 opción A) cabe en los 1.500</td><td class="num">0 €</td></tr>
+        <tr><td>Tren ida</td><td>Mar 13 · AVE 03933 · Córdoba 09:33 → Barcelona-Sants 14:54</td><td class="num">51,05 €</td></tr>
+        <tr><td>Tren vuelta</td><td>Lun 19 · AVE 03942 · Barcelona-Sants 15:41 → Córdoba 20:59</td><td class="num">51,05 €</td></tr>
+        <tr><td>Rodalies</td><td>Sants ↔ Segur de Calafell, ida el 14 y vuelta el 18 (o el 19)</td><td class="num">~10 €</td></tr>
+        <tr><td>Noches 13 y 18</td><td>Casa de una amiga en Barcelona</td><td class="num">0 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>La moto:</b> trail A2 de fábrica (48 CV), con 3 maletas Givi donde cabe el saco. No tiene puños calefactables y va justa por autovía cargada. El dueño lleva poco en Momoven, así que fotos y vídeo de todo al recogerla. El anuncio dice entrega de 00:00 a 23:30, pero es un particular: cierra la hora exacta por escrito.</p>
+  <h3>Ida, miércoles 14</h3>
+  <ol>
+    <li><b>Plaza España → Sants:</b> metro L3 dirección Zona Universitària, 2 paradas, o 15 minutos andando.</li>
+    <li><b>Sants → Segur de Calafell:</b> Rodalies R2 Sud dirección Sant Vicenç de Calders, menos de una hora. Coge un tren hacia las 07:30 y mira el horario la víspera: la R2 Sud tiene retrasos frecuentes.</li>
+    <li><b>Estación → moto:</b> Ronda Sant Miquel de Segur 81, unos 800 m (11 minutos andando).</li>
+  </ol>
+  <h3>Vuelta</h3>
+  <p><b>Opción B (domingo 18, recomendada):</b> de Jaca directo a Segur (~322 km): sales a las 10:00 y llegas hacia las 15:00. Devuelves la moto, R2 Sud a Sants y L3 a Plaza España. El lunes solo tienes que coger el AVE de las 15:41.</p>
+  <p><b>Opción A (lunes 19):</b> el domingo vas de Jaca a Barcelona (~356 km) y el lunes sales a las 08:00 hacia Segur (~57 km por la C-31 y la C-32; comprueba el peaje del Garraf). Son ~91 km más (caben en los 1.500, pero te dejan ~70 km de margen) y te ocupa la mañana.</p>
+  <h3>Qué preguntar al dueño</h3>
+  <p>El kilometraje ya está pactado; mándalo por el chat de Momoven para dejarlo todo por escrito. Si responde mal a 2, no la reserves: sin permiso para Francia no hay viaje.</p>
+  <div class="flag yellow"><p id="msg" style="white-space:pre-line;margin:0">Hola, me interesa tu Benelli TRK 502 X del miércoles 14 de octubre a las 09:00 al domingo 18 por la tarde. Antes de reservar, quería confirmar:
+1. Confirmamos los 300 km/día (1.500 en total) por 100 € extra, ¿verdad? ¿Qué cobras si me paso?
+2. ¿Me dejas salir a Francia y Andorra? ¿El seguro cubre allí y la asistencia en carretera funciona fuera de España?
+3. ¿Puedo devolverla el domingo 18 entre las 15:00 y las 17:00? Si no, ¿el lunes 19 a las 09:00?
+4. ¿Podrías entregármela y recogerla en la estación de Segur de Calafell? Voy en tren desde Barcelona.
+5. ¿Qué franquicia tiene el seguro básico y qué cubre en caso de caída o robo? ¿Cuánto cuesta bajarla?
+6. ¿Cómo está de ruedas y frenos? ¿Cuándo pasó la última revisión?
+7. ¿La entregas con el depósito lleno y la devuelvo igual?
+8. ¿Van las tres maletas Givi con llave? ¿Tiene soporte de móvil o toma USB?
+9. ¿En la moto van el permiso de circulación y el seguro?
+¡Gracias!</p></div>
+  <div class="btns noprint"><button class="btn primary" type="button" id="copyMsg">Copiar mensaje</button></div>
+</section>
+
+<section id="navegacion">
+  <h2>Navegación con calimoto</h2>
+  <p>Los GPX se pueden importar gratis, pero la navegación giro a giro y los mapas offline son de Premium. Basta el pase semanal (unos 7–10 €) o la prueba gratis de 14 días del plan anual, cancelándola a tiempo.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Qué</th><th>Gratis</th><th>Premium</th></tr></thead>
+      <tbody>
+        <tr><td>Importar GPX y verlos en el mapa</td><td>Sí</td><td>Sí</td></tr>
+        <tr><td>Navegación por voz giro a giro</td><td>No</td><td>Sí</td></tr>
+        <tr><td>Mapas offline (sin cobertura en los puertos)</td><td>No</td><td>Sí</td></tr>
+        <tr><td>Exportar GPX</td><td>No</td><td>Sí</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Cómo importar:</b> en la web de calimoto, Trip Planner → importar → "Completed Rides" → sube los archivos de cada día. Convierte cada uno en ruta planificada y comprueba que pasa por todos los puertos. No importes el archivo 99 de puntos de interés: cada punto se convertiría en parada obligatoria. Prueba un día completo en casa y descarga los mapas offline de España, Andorra y Francia.</p>
+</section>
+
+<section id="presupuesto">
+  <h2>Presupuesto</h2>
+  <p>Unos 815–850 €. Solo están pagados los 97 € del tren.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Partida</th><th>Importe</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Moto Benelli TRK 502 X (5 días)</td><td class="num">235,44 €</td><td>Por reservar</td></tr>
+        <tr><td>Ampliación a 300 km/día (1.500 km)</td><td class="num">100 €</td><td>Pactado</td></tr>
+        <tr><td>Tren ida y vuelta</td><td class="num">97,00 €</td><td>Comprado</td></tr>
+        <tr><td>Rodalies Sants ↔ Segur de Calafell</td><td class="num">~10 €</td><td>Estimado</td></tr>
+        <tr><td>Gasolina (~1.341 km)</td><td class="num">~105 €</td><td>Estimado</td></tr>
+        <tr><td>Dormir (4 noches)</td><td class="num">~100–130 €</td><td>Estimado</td></tr>
+        <tr><td>Comida (7 días, ~20–22 €/día)</td><td class="num">~150 €</td><td>Estimado</td></tr>
+        <tr><td>Peaje del Cadí y entradas de Zugarramurdi</td><td class="num">~20 €</td><td>Estimado</td></tr>
+        <tr><td><b>Total</b></td><td class="num">~815–850 €</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Para ahorrar:</b> llena el depósito en Andorra y en Dantxarinea; desayuno y comida de supermercado; cena en el gîte cuando la ofrezcan; menú del día en Jaca.</p>
+</section>
+
+<section id="pendientes">
+  <h2>Pendientes y equipo</h2>
+  <p class="muted">Las marcas se guardan en este navegador.</p>
+  <h3>Antes del martes 13</h3>
+  <ul class="check">
+    <li><label><input type="checkbox" data-id="tren" checked><span>Comprar el tren Córdoba–Barcelona</span></label></li>
+    <li><label><input type="checkbox" data-id="msgdueno"><span>Dejar por escrito con el dueño los 300 km/día por 100 € y el permiso para Francia y Andorra</span></label></li>
+    <li><label><input type="checkbox" data-id="benelli"><span>Reservar la Benelli TRK 502 X en Momoven (recogida mié 14 09:00, devolución dom 18 por la tarde)</span></label></li>
+    <li><label><input type="checkbox" data-id="tiempo"><span>Revisar el tiempo el domingo 11 o lunes 12</span></label></li>
+    <li><label><input type="checkbox" data-id="sare"><span>Confirmar cama en el Gîte Haranederea (Sare) para el viernes 16</span></label></li>
+    <li><label><input type="checkbox" data-id="luz"><span>Reservar habitación en Luz-Saint-Sauveur para el jueves 15</span></label></li>
+    <li><label><input type="checkbox" data-id="jaca"><span>Confirmar precio y plaza en el Albergue de Jaca para el sábado 17</span></label></li>
+    <li><label><input type="checkbox" data-id="gpx"><span>Importar los GPX en calimoto, activar Premium y probar un día</span></label></li>
+    <li><label><input type="checkbox" data-id="r2"><span>Mirar la víspera los horarios de la R2 Sud Sants → Segur de Calafell</span></label></li>
+  </ul>
+  <h3>Equipo</h3>
+  <ul class="check">
+    <li><label><input type="checkbox" data-id="agua"><span>Traje de agua completo (chaqueta y pantalón)</span></label></li>
+    <li><label><input type="checkbox" data-id="termicas"><span>Capas térmicas y forro de invierno</span></label></li>
+    <li><label><input type="checkbox" data-id="guantes"><span>Guantes de invierno impermeables y guantes de repuesto</span></label></li>
+    <li><label><input type="checkbox" data-id="cuello"><span>Cubrecuellos</span></label></li>
+    <li><label><input type="checkbox" data-id="saco"><span>Saco de dormir</span></label></li>
+    <li><label><input type="checkbox" data-id="carga"><span>Mapas offline, cargador USB y batería externa</span></label></li>
+    <li><label><input type="checkbox" data-id="docs"><span>Carnet A2, DNI, contrato y póliza del alquiler, teléfono de asistencia</span></label></li>
+  </ul>
+  <h3>Durante el viaje</h3>
+  <ul class="check">
+    <li><label><input type="checkbox" data-id="fotos"><span>Fotos y vídeo de la moto al recogerla; kilometraje anotado</span></label></li>
+    <li><label><input type="checkbox" data-id="kmnoche"><span>Anotar el kilometraje cada noche</span></label></li>
+    <li><label><input type="checkbox" data-id="puertos"><span>Revisar la víspera el estado de Envalira, Tourmalet y Aubisque</span></label></li>
+    <li><label><input type="checkbox" data-id="gas"><span>Llenar el depósito en Andorra y en Dantxarinea</span></label></li>
+    <li><label><input type="checkbox" data-id="foix"><span>Llamar a Foix por la mañana del miércoles si vas a llegar tarde</span></label></li>
+    <li><label><input type="checkbox" data-id="devol"><span>Fotos y kilometraje al devolver la moto</span></label></li>
+  </ul>
+  <div class="btns noprint"><button class="btn" type="button" id="resetChecks">Desmarcar todo</button></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Plan actualizado el 8 de octubre de 2026. Distancias, horarios y precios aproximados: confirma lo importante antes de salir.</div>
+</footer>
+
+<script>
+const SEGUR="Ronda Sant Miquel de Segur 81, Calafell";
+const DAYS = [
+  {id:"d13", date:"2026-10-13", tab:"Mar 13", title:"Llegada a Barcelona", km:0, night:"Barcelona (amiga)",
+   route:"Tren AVE Córdoba 09:33 → Barcelona-Sants 14:54",
+   facts:[["Tarde","Libre en casa de tu amiga."],["Preparar",["Equipaje en bolsas estancas para las maletas Givi","Móvil, intercomunicador y batería externa cargados","Mapas offline y GPX en calimoto","Horario de la R2 Sud de mañana"]]]},
+  {id:"d14", date:"2026-10-14", tab:"Mié 14", title:"Segur de Calafell → Andorra → Foix", km:331, night:"Foix",
+   route:"Rodalies hacia las 07:30 desde Sants; recogida 09:00 en Segur de Calafell → C-32 → C-37 → C-25 → Manresa → C-16 por Berga → <b>Túnel del Cadí</b> (de pago) → Bellver → La Seu d'Urgell → <b>Andorra la Vella</b> → Encamp → Canillo → <b>Port d'Envalira</b> (2.408 m) → Pas de la Casa → Ax-les-Thermes → Tarascon → <b>Foix</b>",
+   facts:[
+     ["Horario","Salir 09:30 · Berga 11:15 · Andorra la Vella 13:00 · comida rápida en Andorra · Envalira 14:45 · Foix 17:00–17:30. Unas 5 h 20 min de conducción."],
+     ["Hora límite","Moto aparcada a las 18:00 como muy tarde (anochece ~19:15)."],
+     ["Tiempo","Previsión del 8 oct: seco (10 %), máxima de 19 °C en Andorra. En Envalira, hacia las 15:00, unos 10 °C."],
+     ["Control","Si a las 14:30 no has salido de Andorra la Vella, duerme en Ax-les-Thermes (−45 km) y recupera mañana. El albergue de Foix solo recibe hasta las 21:00."],
+     ["Si llueve","Niebla o lluvia fuerte en Envalira: sin Andorra, Cadí → Puigcerdà → Puymorens → Ax → Foix (−60 km)."],
+     ["Ver","Valle de Andorra, Envalira, castillo de Foix al llegar."],
+     ["Gasolina","Llena en Andorra, justo antes de subir a Envalira."],
+     ["Comer y cenar","Comida rápida en Andorra (bocadillo). Cena: <a href='https://maps.google.com/?cid=5165135529314830802' target='_blank' rel='noopener'>La Tasca</a>, portugués, 18:30–23:00."],
+     ["A pie en Foix","~1 h: callejuelas medievales, iglesia de Saint-Volusien y el Pont Vieux sobre el Ariège con el castillo encima. El castillo abre de 10:00 a 18:00, así que por la tarde se ve desde fuera."],
+     ["Noche","Auberge du Léo de Foix (~30 €), llegadas de 16:00 a 21:00."]],
+   maps:[SEGUR,"Foix, France",["Berga","Túnel del Cadí","La Seu d'Urgell","Andorra la Vella","Port d'Envalira","Ax-les-Thermes"]]},
+  {id:"d15", date:"2026-10-15", tab:"Jue 15", title:"Los puertos del Tour", km:219, night:"Luz-Saint-Sauveur",
+   route:"Foix → Saint-Girons → <b>Col de Portet d'Aspet</b> (1.069 m) → Saint-Béat → Bagnères-de-Luchon → <b>Col de Peyresourde</b> (1.569 m) → Arreau → <b>Col d'Aspin</b> (1.489 m) → Sainte-Marie-de-Campan → <b>Col du Tourmalet</b> (2.115 m) → Barèges → <b>Luz-Saint-Sauveur</b>",
+   facts:[
+     ["Horario","Salir 09:00 · Luchon 11:30 · comer en Arreau 13:30 · Tourmalet 15:30 · Luz 16:30"],
+     ["Hora límite","Moto aparcada a las 18:00 como muy tarde (anochece ~19:20)."],
+     ["Tiempo","Previsión del 8 oct: 20 % de lluvia en Luz, máxima de 21 °C. En el Tourmalet, hacia las 15:30, unos 11 °C."],
+     ["Control",["Si a las 14:30 no has pasado Arreau, salta Aspin: Arreau → La Barthe-de-Neste → Bagnères-de-Bigorre → La Mongie → Tourmalet.","Si el Tourmalet está cerrado: Sainte-Marie-de-Campan → Bagnères-de-Bigorre → Lourdes → Argelès → Luz."]],
+     ["Si llueve","Niebla o lluvia fuerte: valle por Bagnères-de-Bigorre → Lourdes → Argelès → Luz, sin Aspin ni Tourmalet (~+30 km)."],
+     ["Gasolina","En Luchon o Arreau; en los puertos no hay."],
+     ["Comer y cenar","Comida: <a href='https://maps.google.com/?cid=17234600913983725662' target='_blank' rel='noopener'>Le Gypaète</a> en Arreau, hamburguesas caseras, 11:30–14:30. Cena: <a href='https://maps.google.com/?cid=18243942343234176354' target='_blank' rel='noopener'>L'Atelier Pizza</a> (solo abre el jueves, 17:30–24:00, pizzas 15–20 €) o Le Mouton Noir reservando un día antes."],
+     ["A pie en Luz","~1,5 h: iglesia fortificada de los Templarios (s. XII) en el centro y el Pont Napoléon sobre la garganta del Gave, a unos 20 min andando por Saint-Sauveur."],
+     ["Noche","Luz-Saint-Sauveur, habitación o apartamento (~26–44 €). Reserva antes."]],
+   maps:["Foix, France","Luz-Saint-Sauveur, France",["Saint-Girons","Col de Portet d'Aspet","Bagnères-de-Luchon","Col de Peyresourde","Arreau","Col d'Aspin","Col du Tourmalet"]]},
+  {id:"d16", date:"2026-10-16", tab:"Vie 16", title:"Aubisque y entrada al País Vasco", km:229, night:"Sare",
+   route:"Luz → Argelès-Gazost → <b>Col du Soulor</b> (1.474 m) → <b>Col d'Aubisque</b> (1.709 m) → Eaux-Bonnes → Laruns → Oloron-Sainte-Marie → Mauléon-Licharre → <b>Saint-Jean-Pied-de-Port</b> → Cambo-les-Bains → Espelette → Ainhoa → <b>Sare</b>",
+   facts:[
+     ["Horario","Salir 09:00 · Aubisque 10:30 · comer en Oloron 12:30 · Saint-Jean-Pied-de-Port 14:30 · Sare 16:00"],
+     ["Hora límite","Moto aparcada a las 18:00; si vas a Zugarramurdi por la tarde, vuelta a Sare antes de las 18:30 (10 km, aún de día)."],
+     ["Zugarramurdi","Si llegas a Sare antes de las 16:30, ve esa misma tarde (10 km): museo hasta las 18:00, última entrada a la cueva a las 17:00. Así el sábado va sin prisas."],
+     ["Control",["Aubisque cerrado: Argelès → Lourdes → Pau → Oloron.","Si a las 14:00 no has llegado a Saint-Jean-Pied-de-Port, salta Espelette y Ainhoa y ve directo a Sare."]],
+     ["Si llueve","Niebla o lluvia fuerte: valle por Argelès → Lourdes → Pau → Oloron, sin Soulor ni Aubisque (km prácticamente iguales)."],
+     ["Gasolina","En Oloron."],
+     ["Comer y cenar","Comida: <a href='https://auxpyrenees.com/carte-restaurant-oloron/' target='_blank' rel='noopener'>Aux Pyrénées</a> en Oloron, menú de tres platos ~16,50 €. Cena: <a href='https://maps.google.com/?cid=12067123527475312239' target='_blank' rel='noopener'>Pleka</a> en Sare, 19:00–21:00, o la cena del gîte."],
+     ["A pie en Sare","~1 h: plaza del frontón con las casas blancas de entramado rojo de Lapurdi y la iglesia de Saint-Martin, con las galerías de madera típicas de las iglesias vascas."],
+     ["Noche","Gîte Haranederea (22 €). Confirma la cama."]],
+   maps:["Luz-Saint-Sauveur, France","Sare, France",["Argelès-Gazost","Col du Soulor","Col d'Aubisque","Laruns","Oloron-Sainte-Marie","Mauléon-Licharre","Saint-Jean-Pied-de-Port","Espelette"]]},
+  {id:"d17", date:"2026-10-17", tab:"Sáb 17", title:"Zugarramurdi y Pirineo navarro", km:240, night:"Jaca", must:true,
+   route:"Sare → <b class='must'>Zugarramurdi</b> (visita) → Urdax → Dantxarinea → Puerto de Otsondo → Elizondo → Eugi → <b>Roncesvalles</b> → Orbaizeta (<b>selva de Irati</b>) → Aribe → Ochagavía → Isaba (valle de Roncal) → Roncal → Burgui → Berdún → <b>Jaca</b>",
+   facts:[
+     ["Horario","Zugarramurdi 10:30–12:30 · salir 12:30 · Roncesvalles 13:45 · Ochagavía 15:15 · Jaca 17:30. Si ya fuiste a Zugarramurdi el viernes: sal de Sare a las 10:00 y llegas hacia las 15:30."],
+     ["Hora límite","Moto aparcada a las 18:00 (anochece ~19:20). Por eso conviene hacer Zugarramurdi el viernes por la tarde."],
+     ["Si ya fuiste","Mañana libre para San Juan de Luz (~25 km ida) o salir antes hacia Irati."],
+     ["Control","Si sales de Zugarramurdi después de las 13:30, o llueve fuerte, salta Irati: Elizondo → Pamplona → A-21 → Jaca (~170 km), llegada hacia las 16:00."],
+     ["Si llueve","Es el mejor día para que llueva: museo interior y cueva cubierta. Vuelta por Pamplona y la A-21, sin Irati (−70 km). La hoja caída de Irati con agua resbala mucho."],
+     ["Gasolina","Ventas de Dantxarinea, más baratas que en Francia."],
+     ["Comer y cenar","Comida: <a href='https://www.hostalorialde.es/es' target='_blank' rel='noopener'>Orialde</a> en Ochagavía, menú con sidra ~18 €, abierto todo el día. Si visitas Zugarramurdi hoy, algo rápido antes en Graxiana (desde las 9:00). Cena: <a href='http://www.latascadeana.com/' target='_blank' rel='noopener'>La Tasca de Ana</a> a las 19:00 (se llena); al lado, 19 Tapas y 500 Vinos o Bar Marboré."],
+     ["A pie en Jaca","~2 h: Ciudadela en forma de estrella (tarde 16:00–20:00 según guías; la visita dura 1–1,5 h), catedral románica de San Pedro (tarde 17:00–20:00), calle Mayor, Torre del Reloj, las Benedictinas y el paseo de la Constitución con vistas a la Peña Oroel. Merienda: repostería jaquesa."],
+     ["Noche","Residencia Albergue Jaca (literas, aparcamiento gratis)."]],
+   maps:["Sare, France","Jaca, Spain",["Zugarramurdi","Elizondo","Roncesvalles","Orbaizeta","Ochagavía","Isaba","Roncal"]]},
+  {id:"d18", date:"2026-10-18", tab:"Dom 18", title:"Vuelta y devolución", km:322, night:"Barcelona (amiga)",
+   route:"Jaca → Sabiñánigo → A-23 → Huesca → A-22 → Lleida → AP-2 → AP-7 → <b>Segur de Calafell</b> (opción B) → R2 Sud a Sants → L3 a Plaza España. En la opción A, desde Lleida A-2 hasta Barcelona (~356 km).",
+   facts:[
+     ["Horario","Salir 10:00 · comer en Lleida · Segur 15:00 · Plaza España hacia las 17:00"],
+     ["Si llueve","Autovía tal cual, paradas solo para repostar."],
+     ["Comer","Parada corta en Lleida o en un área de servicio."],
+     ["Extra","Si vas sobrado: Sabiñánigo → Biescas → Torla (Ordesa) y vuelta (~80 km; se come la mitad del margen)."],
+     ["Al devolver","Fotos y kilometraje."],
+     ["A pie en Barcelona","Desde Plaza España, sube las escaleras del MNAC a Montjuïc para ver la ciudad desde arriba."]],
+   maps:["Jaca, Spain",SEGUR,["Huesca","Lleida"]]},
+  {id:"d19", date:"2026-10-19", tab:"Lun 19", title:"Vuelta a casa", km:0, night:"Casa",
+   route:"Tren AVE Barcelona-Sants 15:41 → Córdoba 20:59",
+   facts:[["Opción A","Solo si no devolviste el domingo: salir 08:00 de Plaza España, moto a las 09:00 en Segur y Rodalies de vuelta a Sants."]]}
+];
+const INCL = 1500;
+
+function mapsUrl(m){const p=new URLSearchParams({api:"1",origin:m[0],destination:m[1],travelmode:"driving",waypoints:m[2].join("|")});return "https://www.google.com/maps/dir/?"+p.toString();}
+function todayId(){const t=new Date();const s=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");const d=DAYS.find(x=>x.date===s);return d?d.id:null;}
+const TODAY=todayId();
+
+const qb=document.querySelector("#quick tbody");
+DAYS.forEach(d=>{const tr=document.createElement("tr");if(d.id===TODAY)tr.className="is-today";
+  tr.innerHTML=`<td class="num">${d.tab}</td><td>${d.must?d.title.replace('Zugarramurdi','<span class="must">Zugarramurdi</span>'):d.title}</td><td class="num">${d.km?("~"+d.km):"—"}</td><td>${d.night}</td>`;qb.appendChild(tr);});
+
+const tabs=document.getElementById("daytabs"),wrap=document.getElementById("days");
+DAYS.forEach(d=>{
+  const b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.id="tab-"+d.id;b.textContent=d.tab;b.setAttribute("aria-controls",d.id);
+  if(d.id===TODAY)b.classList.add("today");b.addEventListener("click",()=>select(d.id,true));tabs.appendChild(b);
+  const art=document.createElement("article");art.className="day";art.id=d.id;art.setAttribute("role","tabpanel");art.setAttribute("aria-labelledby","tab-"+d.id);
+  const facts=d.facts.map(([k,v])=>`<dt>${k}</dt><dd>${Array.isArray(v)?"<ul>"+v.map(x=>`<li>${x}</li>`).join("")+"</ul>":v}</dd>`).join("");
+  art.innerHTML=`<div class="dayhead"><h3>${d.tab} · ${d.title}</h3>${d.km?`<span class="km">~${d.km} km</span>`:""}</div>
+    <div class="route">${d.route}</div><dl class="facts">${facts}<dt>Noche</dt><dd>${d.night}</dd></dl>
+    ${d.maps?`<div class="btns"><a class="btn primary" target="_blank" rel="noopener" href="${mapsUrl(d.maps)}">Abrir ruta en Google Maps</a></div>`:""}`;
+  wrap.appendChild(art);});
+function select(id,focus){DAYS.forEach(d=>{const on=d.id===id;document.getElementById(d.id).classList.toggle("active",on);document.getElementById("tab-"+d.id).setAttribute("aria-selected",on);});if(focus)try{history.replaceState(null,"","#"+id)}catch(e){}}
+const hashDay=DAYS.find(d=>"#"+d.id===location.hash);select(hashDay?hashDay.id:(TODAY||"d14"));
+document.getElementById("todayLink").addEventListener("click",()=>{if(TODAY)select(TODAY)});
+if(!TODAY)document.getElementById("todayLink").textContent="Ruta";
+
+const KEY="viaje-moto-2026";
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function save(s){try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+const state=load();
+const kS=document.getElementById("kmStart"),kN=document.getElementById("kmNow"),kP=document.getElementById("kmPrice");
+if(state.kmStart)kS.value=state.kmStart;if(state.kmNow)kN.value=state.kmNow;if(state.kmPrice)kP.value=state.kmPrice;
+const PLAN=DAYS.reduce((a,d)=>a+d.km,0);
+function eur(n){return n.toFixed(0)+" €"}
+function renderPlan(){const price=parseFloat(kP.value)||0;const kp=document.getElementById("kmPlan");kp.innerHTML="";let acc=0;
+  DAYS.filter(d=>d.km).forEach(d=>{acc+=d.km;const ex=Math.max(0,acc-INCL);const tr=document.createElement("tr");
+    tr.innerHTML=`<td>${d.tab}</td><td class="num">~${d.km}</td><td class="num">~${acc}</td><td class="num">~${INCL-acc}</td>`;kp.appendChild(tr);});}
+function upd(){state.kmStart=kS.value;state.kmNow=kN.value;state.kmPrice=kP.value;save(state);renderPlan();
+  const a=parseFloat(kS.value),b=parseFloat(kN.value),price=parseFloat(kP.value)||0,g=document.getElementById("gauge"),out=document.getElementById("kmOut");
+  if(isNaN(a)||isNaN(b)||b<a){g.querySelector("i").style.width="0";out.textContent=`Plan: ~${PLAN} km de ${INCL} incluidos, margen de ~${INCL-PLAN} km. Introduce los kilómetros para seguir la cuenta real.`;return}
+  const used=b-a,ex=Math.max(0,used-INCL),pct=Math.min(100,used/INCL*100);
+  g.querySelector("i").style.width=pct+"%";g.className="gauge"+(used>INCL?" over":used>INCL-150?" warn":"");
+  out.textContent=ex?`Llevas ${used} km: ${ex} km extra, unos ${eur(ex*price)}. Quedan ~${Math.max(0,PLAN-used)} km de plan.`:`Llevas ${used} km. Te quedan ${INCL-used} km incluidos antes de pagar extra.`;}
+[kS,kN,kP].forEach(el=>el.addEventListener("input",upd));upd();
+
+state.checks=state.checks||{};
+document.querySelectorAll(".check input").forEach(cb=>{const id=cb.dataset.id;if(id in state.checks)cb.checked=state.checks[id];
+  cb.addEventListener("change",()=>{state.checks[id]=cb.checked;save(state)});});
+document.getElementById("resetChecks").addEventListener("click",()=>{document.querySelectorAll(".check input").forEach(cb=>{cb.checked=false;state.checks[cb.dataset.id]=false});save(state);});
+document.getElementById("copyMsg").addEventListener("click",async e=>{const t=document.getElementById("msg").innerText;
+  try{await navigator.clipboard.writeText(t);e.target.textContent="Mensaje copiado"}catch(err){e.target.textContent="Selecciónalo y cópialo a mano"}});
+
+(function(){
+  const F=1341/1370;
+  const P=[[0,10,"Segur"],[115,700],[145,1200,"Cadí"],[190,700],[200,1020,"Andorra"],[225,2408,"Envalira",1],[265,720,"Ax"],[315,380,"Foix"],
+    [360,400],[395,1069,"Portet d'Aspet",1,"end",-8],[440,630,"Luchon"],[455,1569,"Peyresourde",1,"end",-8],[475,700],[488,1489,"Aspin",1,"middle",-22],[500,860],[517,2115,"Tourmalet",1],[545,710,"Luz"],
+    [565,460],[585,1474,"",1],[595,1709,"Soulor y Aubisque",1,"start",-10],[615,520],[650,220,"Oloron"],[680,150],[720,160,"St-Jean"],[755,80],[765,70,"Sare"],
+    [775,200,"Zugarramurdi",2],[790,600],[800,200],[855,950,"Roncesvalles"],[875,800,"Irati"],[900,770],[925,820],[975,600],[1005,820,"Jaca"],
+    [1080,480],[1205,150,"Lleida"],[1370,10,"Segur"]].map(p=>{const q=p.slice();q[0]=p[0]*F;return q});
+  const W=900,H=230,L=8,R=8,T=34,B=36,maxX=1341,maxY=2500;
+  const x=k=>L+(W-L-R)*k/maxX,y=a=>T+(H-T-B)*(1-a/maxY);
+  const svg=document.getElementById("profile");let s="";
+  [0,1000,2000].forEach(a=>{s+=`<line class="axis" x1="${L}" x2="${W-R}" y1="${y(a)}" y2="${y(a)}"/><text class="plab-s" x="${W-R}" y="${y(a)-4}" text-anchor="end">${a} m</text>`});
+  [[331,"Mié"],[550,"Jue"],[779,"Vie"],[1019,"Sáb"],[1341,"Dom"]].reduce((prev,[k,lab])=>{
+    s+=`<line x1="${x(k)}" x2="${x(k)}" y1="${T-6}" y2="${H-B}" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="3 3"/>`;
+    s+=`<text class="plab-s" x="${x((prev+k)/2)}" y="${H-12}" text-anchor="middle">${lab}</text>`;return k;},0);
+  const pts=P.map(p=>x(p[0])+","+y(p[1])).join(" ");
+  s+=`<polygon points="${x(0)},${y(0)} ${pts} ${x(maxX)},${y(0)}" fill="currentColor" fill-opacity=".09"/>`;
+  s+=`<polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>`;
+  P.forEach(p=>{
+    if(p[3]===1){s+=`<circle class="marker-col" cx="${x(p[0])}" cy="${y(p[1])}" r="5"/>`;if(p[2])s+=`<text class="plab" x="${x(p[0])+(p[4]==="end"?-7:p[4]==="start"?7:0)}" y="${y(p[1])+(p[5]||-10)}" text-anchor="${p[4]||"middle"}">${p[2]}</text>`;}
+    else if(p[3]===2){s+=`<circle class="marker-eus" cx="${x(p[0])}" cy="${y(p[1])}" r="6"/><text class="plab" x="${x(p[0])}" y="${y(p[1])-30}" text-anchor="middle" style="fill:var(--eus)">${p[2]}</text>`;}
+  });
+  svg.style.color="var(--ink)";svg.innerHTML=s;
+})();
+</script>
+</body>
+</html>
