@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Equipaje · Viaje en moto Pirineo y País Vasco francés</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧳</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asfalto:#1E2A2F; --texto:#1E2A2F; --suave:#56666C; --fondo:#EEF1EC; --hoja:#F8FAF7;
+  --linea:#C6CFCA; --amarillo:#f2c200; --amarillo-osc:#8a6f00; --ok:#2f7d4f; --aviso:#b3261e;
+  --font:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --texto:#E4EBE7; --suave:#9AABB0; --fondo:#162024; --hoja:#1E2A2F; --linea:#2F3D42;
+    --asfalto:#0E1619; --amarillo-osc:#f2c200; --ok:#5fbf86; --aviso:#ff8a80;
+  }
+}
+:root[data-theme="dark"]{
+  --texto:#E4EBE7; --suave:#9AABB0; --fondo:#162024; --hoja:#1E2A2F; --linea:#2F3D42;
+  --asfalto:#0E1619; --amarillo-osc:#f2c200; --ok:#5fbf86; --aviso:#ff8a80;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--fondo);color:var(--texto);font-family:var(--font);font-size:17px;line-height:1.45;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 80px}
+
+/* Barra superior fija con progreso */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--asfalto);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px}
+.top a.back{font-size:15px;text-decoration:none;opacity:.8;white-space:nowrap}
+.top a.back:hover{opacity:1}
+.prog{flex:1;height:10px;background:#3d424a;border-radius:5px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--amarillo);transition:width .25s}
+.top .num{font-family:var(--cond);font-size:20px;font-weight:700;min-width:64px;text-align:right}
+
+header.hero{padding:28px 0 8px}
+h1{font-family:var(--cond);font-weight:700;font-size:clamp(34px,8vw,52px);line-height:1;margin:0 0 10px;letter-spacing:-.01em}
+.lead{color:var(--suave);margin:0 0 4px;max-width:62ch}
+
+/* La moto vista desde atrás: el elemento memorable */
+.moto{background:var(--hoja);border:1px solid var(--linea);border-radius:14px;padding:14px 10px 6px;margin:20px 0 8px}
+.moto svg{width:100%;height:auto;display:block}
+.moto .zona{cursor:pointer}
+.moto .zona:focus{outline:none}
+.moto .zona:focus-visible .caja{stroke:var(--amarillo);stroke-width:4}
+.moto .caja{fill:var(--hoja);stroke:var(--texto);stroke-width:2.5}
+.moto .relleno{fill:var(--amarillo);transition:height .3s, y .3s}
+.moto text{font-family:var(--cond);font-weight:700;fill:var(--texto)}
+.moto .cuenta{font-family:var(--font);font-weight:600;font-size:22px;fill:var(--suave)}
+.moto .estructura{stroke:var(--suave);stroke-width:2.5;fill:none}
+.moto .neumatico{fill:var(--asfalto)}
+:root[data-theme="dark"] .moto .neumatico{fill:#000}
+.fuera{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:6px 0 10px}
+.fuera button{font:500 15px var(--font);color:var(--texto);background:var(--fondo);border:1px solid var(--linea);border-radius:999px;padding:7px 12px;cursor:pointer}
+.fuera button b{font-weight:600}
+.fuera button.lleno{border-color:var(--ok);color:var(--ok)}
+.pista{font-size:14px;color:var(--suave);text-align:center;margin:0 0 6px}
+
+/* Secciones */
+section.grupo{margin-top:34px}
+.grupo > h2{font-family:var(--cond);font-size:30px;line-height:1.05;margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+.grupo > h2 .c{font-family:var(--font);font-size:15px;font-weight:500;color:var(--suave);margin-left:auto}
+.grupo > h2 .c.lleno{color:var(--ok)}
+.grupo > p.para{margin:0 0 12px;color:var(--suave);max-width:62ch}
+.capa{background:var(--hoja);border:1px solid var(--linea);border-radius:12px;margin:10px 0;overflow:hidden}
+.capa h3{margin:0;padding:10px 14px;font-size:15px;font-weight:600;color:var(--suave);border-bottom:1px solid var(--linea);display:flex;align-items:center;gap:8px}
+.capa h3 .nivel{display:inline-block;width:22px;height:12px;border:2px solid var(--suave);border-radius:2px;position:relative}
+.capa h3 .nivel::after{content:"";position:absolute;left:0;right:0;bottom:0;background:var(--amarillo)}
+.capa h3 .n-fondo::after{height:33%} .capa h3 .n-medio::after{height:66%} .capa h3 .n-arriba::after{height:100%}
+.capa h3 .n-no{display:none}
+ul.items{list-style:none;margin:0;padding:0}
+ul.items li{border-top:1px solid var(--linea)}
+ul.items li:first-child{border-top:0}
+label.it{display:flex;gap:12px;align-items:flex-start;padding:11px 14px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+label.it:hover{background:color-mix(in srgb,var(--amarillo) 8%,transparent)}
+label.it input{appearance:none;-webkit-appearance:none;flex:0 0 24px;width:24px;height:24px;margin:0;border:2px solid var(--suave);border-radius:6px;display:grid;place-content:center;background:var(--hoja);cursor:pointer}
+label.it input::before{content:"";width:12px;height:7px;border-left:3px solid var(--asfalto);border-bottom:3px solid var(--asfalto);transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+label.it input:checked{background:var(--amarillo);border-color:var(--amarillo)}
+label.it input:checked::before{opacity:1}
+label.it input:focus-visible{outline:3px solid var(--amarillo);outline-offset:2px}
+label.it .t{flex:1}
+label.it .t small{display:block;color:var(--suave);font-size:14px;margin-top:2px}
+label.it input:checked + .t{color:var(--suave);text-decoration:line-through;text-decoration-color:var(--linea)}
+label.it input:checked + .t small{text-decoration:none}
+li.sub label.it{padding-left:42px}
+.op{font-size:13px;font-weight:600;color:var(--amarillo-osc);border:1px solid currentColor;border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap}
+.ojo{color:var(--aviso);font-weight:600}
+
+.pie{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.pie button{font:600 16px var(--font);border-radius:10px;padding:12px 16px;cursor:pointer;border:1px solid var(--linea);background:var(--hoja);color:var(--texto)}
+.pie button.peligro{color:var(--aviso);border-color:currentColor}
+.pie button:focus-visible,.fuera button:focus-visible{outline:3px solid var(--amarillo);outline-offset:2px}
+.nota{font-size:14px;color:var(--suave);margin-top:14px}
+.solo-pend label.it:has(input:checked){display:none}
+.solo-pend li:has(input:checked){display:none}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{
+  .top,.moto,.pie,.fuera,.pista{display:none}
+  body{background:#fff;color:#000;font-size:12pt}
+  .capa{break-inside:avoid;border-color:#999}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="back" href="./">‹ Libro de ruta</a>
+    <div class="prog" aria-hidden="true"><i id="barra"></i></div>
+    <span class="num" id="total" aria-live="polite">0/0</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="hero">
+    <h1>La maleta, montón por montón</h1>
+    <p class="lead">Prepara la mesa por montones. Cada uno va a un sitio concreto: las bolsas de las laterales salen de casa ya hechas y en Segur de Calafell solo tienes que soltarlas en su maleta.</p>
+  </header>
+
+  <div class="moto" aria-label="Mapa de la moto: toca una zona para ir a su lista">
+    <svg viewBox="0 0 600 330" role="img" aria-labelledby="motoT">
+      <title id="motoT">Benelli TRK 502 X vista desde atrás con baúl y dos maletas laterales</title>
+      <!-- estructura de la moto -->
+      <path class="estructura" d="M300 215 L300 120 M250 140 L350 140 M215 175 L385 175"/>
+      <rect class="neumatico" x="282" y="230" width="36" height="88" rx="16"/>
+      <rect x="276" y="200" width="48" height="16" rx="4" fill="var(--amarillo)"/>
+      <!-- baúl -->
+      <g class="zona" data-ir="baul" tabindex="0" role="button" aria-label="Baúl">
+        <rect class="caja" x="230" y="22" width="140" height="96" rx="14"/>
+        <clipPath id="cb"><rect x="230" y="22" width="140" height="96" rx="14"/></clipPath>
+        <rect class="relleno" id="f-baul" x="230" y="118" width="140" height="0" clip-path="url(#cb)"/>
+        <rect class="caja" x="230" y="22" width="140" height="96" rx="14" style="fill:none"/>
+        <text x="300" y="66" text-anchor="middle" font-size="30">Baúl</text>
+        <text class="cuenta" id="t-baul" x="300" y="96" text-anchor="middle">0/0</text>
+      </g>
+      <!-- izquierda -->
+      <g class="zona" data-ir="izq" tabindex="0" role="button" aria-label="Maleta izquierda">
+        <rect class="caja" x="40" y="128" width="170" height="160" rx="12"/>
+        <clipPath id="ci"><rect x="40" y="128" width="170" height="160" rx="12"/></clipPath>
+        <rect class="relleno" id="f-izq" x="40" y="288" width="170" height="0" clip-path="url(#ci)"/>
+        <rect class="caja" x="40" y="128" width="170" height="160" rx="12" style="fill:none"/>
+        <text x="125" y="196" text-anchor="middle" font-size="32">Izquierda</text>
+        <text x="125" y="220" text-anchor="middle" font-size="20" style="font-weight:600;fill:var(--suave)">cosas del día</text>
+        <text class="cuenta" id="t-izq" x="125" y="256" text-anchor="middle">0/0</text>
+      </g>
+      <!-- derecha -->
+      <g class="zona" data-ir="der" tabindex="0" role="button" aria-label="Maleta derecha">
+        <rect class="caja" x="390" y="128" width="170" height="160" rx="12"/>
+        <clipPath id="cd"><rect x="390" y="128" width="170" height="160" rx="12"/></clipPath>
+        <rect class="relleno" id="f-der" x="390" y="288" width="170" height="0" clip-path="url(#cd)"/>
+        <rect class="caja" x="390" y="128" width="170" height="160" rx="12" style="fill:none"/>
+        <text x="475" y="196" text-anchor="middle" font-size="32">Derecha</text>
+        <text x="475" y="220" text-anchor="middle" font-size="20" style="font-weight:600;fill:var(--suave)">cosas de la noche</text>
+        <text class="cuenta" id="t-der" x="475" y="256" text-anchor="middle">0/0</text>
+      </g>
+      <text x="475" y="314" text-anchor="middle" font-size="19" style="font-weight:600;fill:var(--aviso)">lado del escape</text>
+      <text x="125" y="314" text-anchor="middle" font-size="19" style="font-weight:600;fill:var(--suave)">lado de la pata</text>
+    </svg>
+    <div class="fuera" id="fuera"></div>
+    <p class="pista">Toca una zona para ir a su lista. Se llena de amarillo según vas marcando.</p>
+  </div>
+
+  <div id="listas"></div>
+
+  <div class="pie">
+    <button id="filtro" aria-pressed="false">Ocultar lo ya preparado</button>
+    <button id="imprimir">Imprimir</button>
+    <button id="reset" class="peligro">Desmarcar todo</button>
+  </div>
+  <p class="nota" id="nota">Lo que marcas se guarda en este navegador. Si cambias de móvil o de navegador, empieza de cero.</p>
+</main>
+
+<script>
+/* Capas: f = al fondo, m = en medio, a = arriba, x = sin capa */
+const GRUPOS = [
+  {id:"encima", nombre:"Encima de ti", corto:"Encima", para:"Lo que llevas puesto en el tren y en la moto. Los papeles, siempre en el bolsillo interior: nunca en las maletas.",
+   capas:[
+    {c:"x", t:"Puesto", items:[
+      ["Chaqueta de moto","Con las protecciones colocadas: hombros, codos y espalda si tiene"],
+      ["Vaquero grueso",""],
+      ["Botas de trekking Columbia","Cordones con doble nudo y metidos por dentro, que no se enganchen en la palanca"],
+      ["Camiseta técnica",""],
+      ["Gafas de sol","O la visera solar del casco"]
+    ]},
+    {c:"x", t:"Dentro del casco (en la mano en el tren)", items:[
+      ["Casco",""],
+      ["Guantes principales",""],
+      ["Buff fino",""],
+      ["Tapones para los oídos","En autovía el ruido del viento cansa muchísimo"],
+      ["Paño de microfibra para la visera",""]
+    ]},
+    {c:"x", t:"Bolsillo interior de la chaqueta, con cremallera", items:[
+      ["DNI",""],
+      ["Carnet de conducir físico",""],
+      ["Tarjeta de crédito para la fianza",""],
+      ["Efectivo","Unos 100–150 € para pensiones, cafés y gasolineras pequeñas"],
+      ["Tarjeta Sanitaria Europea",""]
+    ]},
+    {c:"x", t:"Bolsillo exterior", items:[
+      ["Móvil",""],
+      ["Llaves de casa de Córdoba",""]
+    ]},
+    {c:"x", t:"En el móvil", items:[
+      ["Billete de tren de ida",""],
+      ["Billete de vuelta del martes 20","Comprueba que el cambio de fecha está hecho"],
+      ["Contrato de Momoven y teléfono de asistencia en carretera",""],
+      ["Fotos del DNI, el carnet y la tarjeta sanitaria",""],
+      ["Mapas offline de Pirineos, Andorra y Euskadi Norte",""],
+      ["GPX de la ruta cargados en calimoto",""],
+      ["Dirección del alojamiento de Barcelona",""]
+    ]}
+  ]},
+  {id:"izq", nombre:"Maleta izquierda", corto:"Izquierda", para:"Las cosas del día, en una bolsa estanca de un color. Es el lado de la pata de cabra, por el que te bajas: lo que vayas a necesitar en un arcén, arriba.",
+   capas:[
+    {c:"f", t:"Al fondo, pegado a la moto", items:[
+      ["Arrancador","Cargado al 100 %, con su cable"],
+      ["Inflador","Con sus boquillas o adaptadores"]
+    ]},
+    {c:"m", t:"En medio", items:[
+      ["Botiquín en neceser o bolsa zip",""],
+      ["Ibuprofeno","",1],["Paracetamol","",1],["Antidiarreico","",1],["Antihistamínico","",1],
+      ["Tiritas variadas","",1],
+      ["Compeed","Vas a caminar mucho con botas de trekking",1],
+      ["Gasas, esparadrapo y venda pequeña","",1],
+      ["Antiséptico","Monodosis de clorhexidina o similar",1],
+      ["Pinzas","",1],["Manta térmica","",1],
+      ["Tus medicamentos habituales","Si tomas alguno",1],
+      ["Navaja, tenedor y cuchillo","En la mochila para el tren, no en el bolsillo: el AVE pasa escáner"],
+      ["Frontal","Cargado o con pilas nuevas"],
+      ["Pilas de repuesto del frontal","Si funciona con pilas"],
+      ["Mechero",""],
+      ["Botella de agua rellenable",""],
+      ["Comida de emergencia","Frutos secos, barritas"]
+    ]},
+    {c:"a", t:"Arriba del todo: se saca en el arcén sin vaciar nada", items:[
+      ["Cubrepantalón Quechua con cubrezapatos",""],
+      ["Chubasquero de arriba","Si llevas uno aparte de la chaqueta"],
+      ["Camiseta térmica de manga larga",""],
+      ["Forro polar fino o plumífero comprimible",""],
+      ["Guantes de recambio","Los de invierno, si tienes dos pares"],
+      ["Buff térmico",""],
+      ["Gorro fino","Para las tardes en los Pirineos"],
+      ["Chaleco reflectante","Obligatorio llevarlo en Francia"],
+      ["Protector solar",""],
+      ["Protector labial",""]
+    ]}
+  ]},
+  {id:"der", nombre:"Maleta derecha", corto:"Derecha", para:"Las cosas de la noche, en una bolsa estanca de otro color. Va del lado del escape: nada de baterías ni cosas que se estropeen con calor.",
+   capas:[
+    {c:"f", t:"Al fondo, pegado a la moto", items:[
+      ["Herramientas de moto","Mira antes qué trae la Benelli bajo el asiento para no duplicar"],
+      ["Cinta americana","Un rollo pequeño o enrollada en un bolígrafo"],
+      ["Bridas variadas",""],
+      ["Trapo y guantes de nitrilo",""],
+      ["Kit de pinchazos","Pregunta en Momoven si es tubeless o con cámara: con cámara el kit de mechas no sirve"],
+      ["Spray pequeño de lubricante de cadena","En ~1.500 km igual toca engrasar una vez",0,1]
+    ]},
+    {c:"m", t:"En medio", items:[
+      ["Saco de dormir","Comprimido en su funda de compresión"],
+      ["Bolsa estanca de ropa",""],
+      ["2 camisetas técnicas","La tercera la llevas puesta",1],
+      ["Malla térmica","Para conducir por las mañanas y para dormir",1],
+      ["4 calzoncillos","",1],
+      ["4 pares de calcetines","2 de ellos gruesos para conducir",1],
+      ["Algo cómodo para dormir","O usa la malla y la térmica",1],
+      ["Bolsa vacía para la ropa sucia",""]
+    ]},
+    {c:"a", t:"Arriba", items:[
+      ["Neceser",""],
+      ["Cepillo y pasta de dientes","",1],["Desodorante","",1],
+      ["Gel y champú de viaje","O un 2 en 1",1],
+      ["Jabón para lavar ropa a mano","",1],
+      ["Cortaúñas","",1],["Pañuelos y toallitas","",1],
+      ["Papel higiénico","Medio rollo aplastado",1],
+      ["Maquinilla","Si te afeitas",1],
+      ["Toalla de microfibra",""],
+      ["Chanclas de ducha",""],
+      ["Tapones para dormir y antifaz",""],
+      ["Cuerda pequeña o pinzas para tender",""],
+      ["Bolsa de electrónica",""],
+      ["Cargador de pared con 2 USB","",1],
+      ["Cable del móvil y otro de repuesto","",1],
+      ["Cable de carga del arrancador","",1],
+      ["Cable del intercomunicador","Si llevas",1],
+      ["Auriculares","",1]
+    ]}
+  ]},
+  {id:"baul", nombre:"Baúl", corto:"Baúl", para:"Casi vacío: es donde van el casco y la chaqueta cuando aparcas para patear. El día de la recogida prueba que caben juntos.",
+   capas:[
+    {c:"x", t:"Dentro", items:[
+      ["Powerbank","Cargada"],
+      ["Cable antirrobo","Para pasar el casco o la manga de la chaqueta si no caben juntos"],
+      ["Candado de disco","Si la moto no trae; con un recordatorio de color en el manillar"],
+      ["Bolsa de tela plegable","Para llevar cosas al pasear a pie",0,1]
+    ]}
+  ]},
+  {id:"sujecion", nombre:"Sujeción y montaje", corto:"Montaje", para:"Lo que no va dentro de ninguna maleta concreta pero hace que todo funcione.",
+   capas:[
+    {c:"x", t:"", items:[
+      ["2 bolsas estancas de colores distintos","Una para la izquierda y otra para la derecha (o bolsas de basura gruesas para forrar)"],
+      ["Pulpos o red elástica","Por si algo tiene que ir por fuera"],
+      ["Soporte del móvil para el manillar","Con su adaptador"],
+      ["Intercomunicador","Cargado, si tienes"],
+      ["Mochila plegable de transporte","Lleva las bolsas en el tren; luego va doblada al fondo de una lateral"]
+    ]}
+  ]},
+  {id:"bcn", nombre:"Maleta que se queda en Barcelona", corto:"Barcelona", para:"No sube a la moto. Te espera en casa de tu amiga para el lunes 19 y el martes 20 en la ciudad.",
+   capas:[
+    {c:"x", t:"", items:[
+      ["2 camisetas de calle",""],
+      ["Pantalón de calle",""],
+      ["Sudadera o chaqueta normal",""],
+      ["Ropa interior y calcetines para lunes y martes",""],
+      ["Muda limpia para el tren de vuelta del martes 20",""],
+      ["Zapatillas de calle",""],
+      ["Neceser completo","O el mismo de la moto, si prefieres llevar solo uno"],
+      ["Portátil y su cargador","Si te lo llevas"],
+      ["Cargadores que no necesites en la moto",""],
+      ["Bolsa grande para la ropa sucia del viaje",""],
+      ["Cosas de valor que no quieras arriesgar en la moto",""]
+    ]}
+  ]},
+  {id:"antes", nombre:"Antes de salir de Córdoba", corto:"Antes de salir", para:"Tareas, no cosas: lo que tiene que estar hecho antes del tren del martes 13.",
+   capas:[
+    {c:"x", t:"", items:[
+      ["Cargar al 100 %: arrancador, powerbank, frontal, intercomunicador y móvil",""],
+      ["Descargar los mapas offline",""],
+      ["Navaja dentro de la mochila, no en el bolsillo",""],
+      ["Avisar a alguien de la ruta aproximada","Vas solo"],
+      ["Recordatorio: datos móviles off antes de entrar en Andorra","No hay roaming UE en Andorra"]
+    ]}
+  ]}
+];
+
+const CLAVE = "equipaje-moto-oct2026";
+let estado = {};
+try { estado = JSON.parse(localStorage.getItem(CLAVE) || "{}") || {}; } catch(e) { estado = {}; }
+function guardar(){ try { localStorage.setItem(CLAVE, JSON.stringify(estado)); } catch(e) {} }
+
+const NIVEL = {f:"n-fondo", m:"n-medio", a:"n-arriba", x:"n-no"};
+const cont = document.getElementById("listas");
+
+GRUPOS.forEach(g => {
+  const s = document.createElement("section");
+  s.className = "grupo"; s.id = g.id;
+  s.innerHTML = `<h2>${g.nombre}<span class="c" id="c-${g.id}"></span></h2><p class="para">${g.para}</p>`;
+  g.capas.forEach((capa, ci) => {
+    const d = document.createElement("div"); d.className = "capa";
+    if (capa.t) d.innerHTML = `<h3><span class="nivel ${NIVEL[capa.c]}" aria-hidden="true"></span>${capa.t}</h3>`;
+    const ul = document.createElement("ul"); ul.className = "items";
+    capa.items.forEach((it, ii) => {
+      const [nombre, det, sub, opc] = it;
+      const k = `${g.id}-${ci}-${ii}`;
+      const li = document.createElement("li"); if (sub) li.className = "sub";
+      li.innerHTML = `<label class="it"><input type="checkbox" data-k="${k}" data-g="${g.id}"${estado[k] ? " checked" : ""}><span class="t">${nombre}${opc ? '<span class="op">opcional</span>' : ""}${det ? `<small>${det}</small>` : ""}</span></label>`;
+      ul.appendChild(li);
+    });
+    d.appendChild(ul); s.appendChild(d);
+  });
+  cont.appendChild(s);
+});
+
+/* Botones para las zonas que no son maletas */
+const fuera = document.getElementById("fuera");
+GRUPOS.filter(g => !["izq","der","baul"].includes(g.id)).forEach(g => {
+  const b = document.createElement("button");
+  b.dataset.ir = g.id; b.id = "b-" + g.id;
+  b.innerHTML = `${g.corto} <b id="bt-${g.id}"></b>`;
+  fuera.appendChild(b);
+});
+
+function ir(id){
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}
+document.querySelectorAll("[data-ir]").forEach(el => {
+  el.addEventListener("click", () => ir(el.dataset.ir));
+  el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ir(el.dataset.ir); } });
+});
+
+const ALTO = {baul:{y:22,h:96}, izq:{y:128,h:160}, der:{y:128,h:160}};
+function pintar(){
+  const all = document.querySelectorAll("input[data-k]");
+  let tot = 0, hech = 0;
+  const por = {};
+  all.forEach(i => {
+    const g = i.dataset.g;
+    por[g] = por[g] || [0,0];
+    por[g][0]++; tot++;
+    if (i.checked) { por[g][1]++; hech++; }
+  });
+  document.getElementById("total").textContent = `${hech}/${tot}`;
+  document.getElementById("barra").style.width = (tot ? hech / tot * 100 : 0) + "%";
+  Object.entries(por).forEach(([g,[n,h]]) => {
+    const c = document.getElementById("c-" + g);
+    c.textContent = h === n ? "Listo" : `${h} de ${n}`;
+    c.classList.toggle("lleno", h === n);
+    if (ALTO[g]) {
+      const f = document.getElementById("f-" + g), a = ALTO[g];
+      const alto = a.h * (h / n);
+      f.setAttribute("y", a.y + a.h - alto); f.setAttribute("height", alto);
+      document.getElementById("t-" + g).textContent = h === n ? "Listo" : `${h}/${n}`;
+    } else {
+      const bt = document.getElementById("bt-" + g);
+      if (bt) bt.textContent = h === n ? "✓" : `${h}/${n}`;
+      const b = document.getElementById("b-" + g);
+      if (b) b.classList.toggle("lleno", h === n);
+    }
+  });
+}
+
+cont.addEventListener("change", e => {
+  const i = e.target; if (!i.dataset.k) return;
+  if (i.checked) estado[i.dataset.k] = 1; else delete estado[i.dataset.k];
+  guardar(); pintar();
+});
+
+const filtro = document.getElementById("filtro");
+filtro.addEventListener("click", () => {
+  const on = document.body.classList.toggle("solo-pend");
+  filtro.setAttribute("aria-pressed", on);
+  filtro.textContent = on ? "Mostrar todo" : "Ocultar lo ya preparado";
+});
+document.getElementById("imprimir").addEventListener("click", () => window.print());
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("¿Desmarcar toda la lista?")) return;
+  estado = {}; guardar();
+  document.querySelectorAll("input[data-k]").forEach(i => i.checked = false);
+  pintar();
+});
+
+pintar();
+</script>
+</body>
+</html>
