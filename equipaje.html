@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Equipaje · Viaje en moto Pirineo y País Vasco francés</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1E2A2F">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧳</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,7 +109,21 @@ li.sub label.it{padding-left:42px}
 @media print{
   .top,.moto,.pie,.fuera,.pista{display:none}
   body{background:#fff;color:#000;font-size:12pt}
-  .capa{break-inside:avoid;border-color:#999}
+  .capa{break-inside:auto;border:0;border-radius:0;margin:4px 0;background:none}
+  .wrap{max-width:none;padding:0}
+  header.hero{padding:0}
+  h1{font-size:22pt;margin-bottom:4px}
+  .lead,.grupo > p.para{font-size:9.5pt;margin:0 0 4px}
+  section.grupo{margin-top:12px;break-inside:auto}
+  .grupo > h2{font-size:15pt;break-after:avoid}
+  .capa h3{padding:2px 0;font-size:9.5pt;border-bottom:1px solid #999;break-after:avoid}
+  ul.items{columns:2;column-gap:18px}
+  ul.items li{border:0;break-inside:avoid}
+  label.it{padding:1px 0;gap:6px;font-size:9.5pt;line-height:1.25}
+  li.sub label.it{padding-left:14px}
+  label.it input{flex:0 0 11px;width:11px;height:11px;border-width:1px;border-radius:2px;margin-top:2px}
+  label.it .t small{font-size:8pt;margin-top:0}
+  .solo-pend label.it:has(input:checked),.solo-pend li:has(input:checked){display:flex}
 }
 </style>
 </head>
@@ -240,6 +256,9 @@ const GRUPOS = [
       ["Pilas de repuesto del frontal","Si funciona con pilas"],
       ["Mechero",""],
       ["Botella de agua rellenable",""],
+      ["Insta360","Con la tarjeta de 256 GB metida y formateada"],
+      ["Baterías de repuesto de la Insta360","Cargadas",1],
+      ["Protector de lentes y paño","Límpialas en cada parada",1],
       ["Comida de emergencia","Frutos secos, barritas"]
     ]},
     {c:"a", t:"Arriba del todo: se saca en el arcén sin vaciar nada", items:[
@@ -292,7 +311,8 @@ const GRUPOS = [
       ["Cable del móvil y otro de repuesto","",1],
       ["Cable de carga del arrancador","",1],
       ["Cable del intercomunicador","Si llevas",1],
-      ["Auriculares","",1]
+      ["Auriculares","",1],
+      ["Cargador de baterías de la Insta360 y su cable","",1]
     ]}
   ]},
   {id:"baul", nombre:"Baúl", corto:"Baúl", para:"Casi vacío: es donde van el casco y la chaqueta cuando aparcas para patear. El día de la recogida prueba que caben juntos.",
@@ -310,6 +330,7 @@ const GRUPOS = [
       ["2 bolsas estancas de colores distintos","Una para la izquierda y otra para la derecha (o bolsas de basura gruesas para forrar)"],
       ["Pulpos o red elástica","Por si algo tiene que ir por fuera"],
       ["Soporte del móvil para el manillar","Con su adaptador"],
+      ["Soporte de la Insta360 y palo invisible","En la moto, no en el casco"],
       ["Intercomunicador","Cargado, si tienes"],
       ["Mochila plegable de transporte","Lleva las bolsas en el tren; luego va doblada al fondo de una lateral"]
     ]}
@@ -334,6 +355,7 @@ const GRUPOS = [
    capas:[
     {c:"x", t:"", items:[
       ["Cargar al 100 %: arrancador, powerbank, frontal, intercomunicador y móvil",""],
+      ["Cargar las baterías de la Insta360 y dejarla en 4K a 30 fps",""],
       ["Descargar los mapas offline",""],
       ["Navaja dentro de la mochila, no en el bolsillo",""],
       ["Avisar a alguien de la ruta aproximada","Vas solo"],
@@ -441,5 +463,6 @@ document.getElementById("reset").addEventListener("click", () => {
 
 pintar();
 </script>
+<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 </body>
 </html>

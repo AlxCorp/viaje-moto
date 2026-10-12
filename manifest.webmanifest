@@ -1,0 +1,11 @@
+{
+  "name": "Pirineo y País Vasco francés en moto",
+  "short_name": "Ruta moto",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EEF1EC",
+  "theme_color": "#1E2A2F",
+  "lang": "es",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

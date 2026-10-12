@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pirineo y País Vasco francés en moto · 13–19 oct 2026</title>
+<title>Pirineo y País Vasco francés en moto · 13–20 oct 2026</title>
 <meta name="description" content="Libro de ruta del viaje en moto: Barcelona, Andorra, puertos del Tour, País Vasco francés y Zugarramurdi.">
 <meta name="theme-color" content="#1E2A2F">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ruta moto">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,13 +132,14 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
   .tbl{overflow:visible}
   table{min-width:0}
 }
+tr.grp td{background:var(--paper-2);font-family:var(--cond);font-size:1.05rem}
 </style>
 </head>
 <body>
 
 <header class="wrap">
   <h1 class="title">Pirineo y País Vasco francés en moto</h1>
-  <p class="dates">13–19 de octubre de 2026 · 5 días de moto · ~1.341 km</p>
+  <p class="dates">13–20 de octubre de 2026 · 5 días de moto · ~1.341 km</p>
   <figure class="profile" aria-label="Perfil de altitud del recorrido">
     <svg id="profile" viewBox="0 0 900 230" role="img"></svg>
     <figcaption>Perfil aproximado de altitud a lo largo de la ruta. En amarillo, los puertos; en rojo, Zugarramurdi.</figcaption>
@@ -147,6 +151,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
     <a href="#hoy" id="todayLink" class="today">Hoy</a>
     <a href="#resumen">Resumen</a>
     <a href="#dias">Días</a>
+    <a href="#grabar">Grabar</a>
     <a href="#apie">A pie</a>
     <a href="#comer">Comer</a>
     <a href="#lluvia">Lluvia</a>
@@ -158,7 +163,8 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
     <a href="#moto">Moto</a>
     <a href="#navegacion">Navegación</a>
     <a href="#presupuesto">Presupuesto</a>
-    <a href="#pendientes">Pendientes</a>
+    <a href="#pendientes">Checklist</a>
+    <a href="equipaje.html">Equipaje</a>
   </div>
 </nav>
 
@@ -176,7 +182,8 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
   <div class="flag"><b class="must">Innegociable:</b> Zugarramurdi y las brujas. Hay dos ventanas de visita, el viernes por la tarde o el sábado por la mañana, y todas las vías de escape las respetan.</div>
   <div class="flag yellow"><b>Prescindible si no queda otra:</b> Andorra (lo primero), Aspin, Espelette y Ainhoa, la selva de Irati y San Juan de Luz.</div>
   <div class="btns">
-    <a class="btn primary" href="Viaje_moto_Pirineo_Pais_Vasco_13-19_oct_2026.pdf" download>Descargar PDF</a>
+    <a class="btn primary" href="Viaje_moto_Pirineo_Pais_Vasco_13-20_oct_2026.pdf" download>Descargar PDF</a>
+    <a class="btn" href="equipaje.html">Checklist de equipaje</a>
     <button class="btn" type="button" onclick="window.print()">Imprimir esta página</button>
   </div>
 </section>
@@ -187,6 +194,57 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
   <p>Regla general: llegar antes de las 18:30. Anochece hacia las 19:10 en Barcelona y las 19:30 en el País Vasco. Distancias y horas aproximadas.</p>
   <div class="daytabs" role="tablist" id="daytabs"></div>
   <div id="days"></div>
+</section>
+
+<section id="grabar">
+  <h2>Grabar y parar</h2>
+  <p>Insta360 a 4K y 30 fps en todo el viaje, salvo el balcón del Soulor al Aubisque, que va a 5.7K. Graba clips de 2–5 minutos, nunca la autovía, y usa TimeShift en las subidas largas. Revisa cada noche el espacio libre y borra los clips fallidos.</p>
+  <div class="btns noprint">
+    <a class="btn primary" href="paradas_y_grabacion.kml" download>Descargar paradas para Google Maps (KML)</a>
+  </div>
+  <p class="muted">Para verlas en el móvil: en un ordenador, abre <a href="https://www.google.com/maps/d/" target="_blank" rel="noopener">Google My Maps</a>, crea un mapa, pulsa <b>Importar</b> y sube el KML. Después lo tienes en la app de Google Maps, en <b>Guardados → Mapas</b>. No lo importes en calimoto: convertiría cada punto en una parada obligatoria.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Qué</th><th>Sitio</th><th>Nota</th></tr></thead>
+      <tbody>
+      <tr class="grp"><td colspan="3"><b>Mié 14</b></td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=41.198032,1.605958" target="_blank" rel="noopener">Salida de Momoven, Segur de Calafell</a></td><td>Intro del vídeo: 2–3 min con la moto cargada.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.101146,1.845476" target="_blank" rel="noopener">Berga → boca del túnel del Cadí</a></td><td>Grabar ~10 min con la sierra del Cadí delante. El túnel, no.</td></tr>
+      <tr><td class="num">🛑 Opcional</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.568925,1.588021" target="_blank" rel="noopener">Mirador del Roc del Quer (opcional)</a></td><td>Pasarela volada con suelo de cristal. Desvío de ~6,5 km desde la primera rotonda de Canillo (carretera del Coll d&#x27;Ordino). Aparcamiento gratis, entrada 6 €, abre jun–nov. Unos 40 min en total: solo si vas bien de hora.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.566831,1.597765" target="_blank" rel="noopener">Canillo: empieza la subida a Envalira</a></td><td>Grabar ~20 min hasta la cima.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.540176,1.719381" target="_blank" rel="noopener">Port d&#x27;Envalira (2.408 m)</a></td><td>Punto más alto del viaje. Foto y giro de 360 con el palo.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.54471,1.733494" target="_blank" rel="noopener">Pas de la Casa → Ax-les-Thermes</a></td><td>Grabar ~10 min de curvas del lado francés.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.96629,1.609072" target="_blank" rel="noopener">Pont Vieux de Foix</a></td><td>El castillo desde el puente, a pie al llegar.</td></tr>
+      <tr class="grp"><td colspan="3"><b>Jue 15</b></td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.944751,0.853708" target="_blank" rel="noopener">Col de Portet d&#x27;Aspet (1.069 m)</a></td><td>Grabar subida y bajada, ~15 min.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.944751,0.853708" target="_blank" rel="noopener">Estela de Fabio Casartelli</a></td><td>Ubicación aproximada: la estela está en la bajada desde esta cima, señalizada junto a la carretera. Parada corta.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.802306,0.463075" target="_blank" rel="noopener">Col de Peyresourde (1.569 m)</a></td><td>Grabar la subida, ~15 min.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.942332,0.327382" target="_blank" rel="noopener">Col d&#x27;Aspin (1.489 m)</a></td><td>De las mejores vistas del día; vacas y caballos sueltos.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.984807,0.227616" target="_blank" rel="noopener">Sainte-Marie-de-Campan: empieza el Tourmalet</a></td><td>Grabar ~25 min pasando por La Mongie.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.908388,0.145297" target="_blank" rel="noopener">Col du Tourmalet (2.115 m)</a></td><td>El Géant y el Pic du Midi enfrente.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.895882,0.062237" target="_blank" rel="noopener">Bajada a Barèges y Luz</a></td><td>Grabar ~10 min.</td></tr>
+      <tr class="grp"><td colspan="3"><b>Vie 16</b></td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.960616,-0.261134" target="_blank" rel="noopener">Col du Soulor (1.474 m) · empieza el 5.7K</a></td><td>Cambia a 5.7K aquí. Vistas al valle que vas a recorrer.</td></tr>
+      <tr><td class="num">🎥 5.7K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.959513,-0.28353" target="_blank" rel="noopener">Circo del Litor (5.7K)</a></td><td>La imagen del viaje: carretera balcón y túneles en la roca. Para en uno de los apartaderos.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.976575,-0.339792" target="_blank" rel="noopener">Col d&#x27;Aubisque (1.709 m) · fin del 5.7K</a></td><td>Las bicis gigantes. Vuelve a 4K.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.972859,-0.39275" target="_blank" rel="noopener">Bajada a Eaux-Bonnes y Laruns</a></td><td>Grabar ~10 min.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.163335,-1.235934" target="_blank" rel="noopener">Saint-Jean-Pied-de-Port, rue de la Citadelle</a></td><td>~5 min a pie.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.341173,-1.448083" target="_blank" rel="noopener">Espelette</a></td><td>Si te paras.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.306722,-1.498812" target="_blank" rel="noopener">Ainhoa</a></td><td>Si te paras.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.305522,-1.57268" target="_blank" rel="noopener">Llegada a Sare</a></td><td>~3 min.</td></tr>
+      <tr class="grp"><td colspan="3"><b>Sáb 17</b></td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.268407,-1.548059" target="_blank" rel="noopener">Cueva de Zugarramurdi</a></td><td>10–15 min a pie; la 360 luce mucho dentro. En el museo, pregunta antes de grabar.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.233194,-1.498776" target="_blank" rel="noopener">Puerto de Otsondo</a></td><td>Grabar ~10 min.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=43.009118,-1.227908" target="_blank" rel="noopener">Fábrica de Orbaiceta (selva de Irati)</a></td><td>Grabar ~15 min de hayedo. Ojo: la hoja mojada resbala.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.906438,-1.0902" target="_blank" rel="noopener">Ochagavía</a></td><td>~5 min a pie.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.861207,-0.9232" target="_blank" rel="noopener">Isaba: valle de Roncal</a></td><td>Grabar ~15 min hasta Burgui.</td></tr>
+      <tr><td class="num">🛑 Parar</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.720026,-1.002433" target="_blank" rel="noopener">Puente medieval de Burgui</a></td><td>En el pueblo, sobre el río Esca.</td></tr>
+      <tr class="grp"><td colspan="3"><b>Dom 18</b></td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=42.569288,-0.549376" target="_blank" rel="noopener">Salida de Jaca</a></td><td>Plano de salida; el resto es autovía.</td></tr>
+      <tr><td class="num">🎥 4K</td><td><a href="https://www.google.com/maps/search/?api=1&amp;query=41.198032,1.605958" target="_blank" rel="noopener">Entrega de la moto en Segur de Calafell</a></td><td>Plano de cierre del vídeo.</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section id="apie">
@@ -360,6 +418,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
         <tr><td>Vie 16</td><td>Sare</td><td><a href="https://www.gites64.com/Gites-etape-sejour-Sare-Larcabal-Cote-Basque-64G552002.html" target="_blank" rel="noopener">Gîte Haranederea</a>, junto al GR10</td><td class="num">22 €</td><td>En vacaciones escolares francesas cortas se alquila entero: confirma esa noche</td></tr>
         <tr><td>Sáb 17</td><td>Jaca</td><td><a href="https://www.alberguescaminosantiago.com/camino-aragones/albergue-jaca-hostel-jaca/" target="_blank" rel="noopener">Residencia Albergue Jaca</a> (Av. Perimetral 2)</td><td class="num">por confirmar</td><td>Literas, aparcamiento gratis, 10 min a pie del centro</td></tr>
         <tr><td>Dom 18</td><td>Barcelona</td><td>Casa de una amiga</td><td class="num">0 €</td><td></td></tr>
+        <tr><td>Lun 19</td><td>Barcelona</td><td>Casa de una amiga</td><td class="num">0 €</td><td>Noche extra: la vuelta pasa al martes 20</td></tr>
       </tbody>
     </table>
   </div>
@@ -396,7 +455,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
         <tr><td>Km incluidos</td><td>1.500 km (300 km/día), ampliación pactada con el dueño</td><td class="num">100 €</td></tr>
         <tr><td>Km extra</td><td>Ninguno: la ruta (~1.341 km opción B, ~1.432 opción A) cabe en los 1.500</td><td class="num">0 €</td></tr>
         <tr><td>Tren ida</td><td>Mar 13 · AVE 03933 · Córdoba 09:33 → Barcelona-Sants 14:54</td><td class="num">51,05 €</td></tr>
-        <tr><td>Tren vuelta</td><td>Lun 19 · AVE 03942 · Barcelona-Sants 15:41 → Córdoba 20:59</td><td class="num">51,05 €</td></tr>
+        <tr><td>Tren vuelta</td><td>Mar 20 · Barcelona-Sants → Córdoba (horario en tu billete)</td><td class="num">51,05 €</td></tr>
         <tr><td>Rodalies</td><td>Sants ↔ Segur de Calafell, ida el 14 y vuelta el 18 (o el 19)</td><td class="num">~10 €</td></tr>
         <tr><td>Noches 13 y 18</td><td>Casa de una amiga en Barcelona</td><td class="num">0 €</td></tr>
       </tbody>
@@ -468,39 +527,19 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
 </section>
 
 <section id="pendientes">
-  <h2>Pendientes y equipo</h2>
-  <p class="muted">Las marcas se guardan en este navegador.</p>
-  <h3>Antes del martes 13</h3>
-  <ul class="check">
-    <li><label><input type="checkbox" data-id="tren" checked><span>Comprar el tren Córdoba–Barcelona</span></label></li>
-    <li><label><input type="checkbox" data-id="msgdueno"><span>Dejar por escrito con el dueño los 300 km/día por 100 € y el permiso para Francia y Andorra</span></label></li>
-    <li><label><input type="checkbox" data-id="benelli"><span>Reservar la Benelli TRK 502 X en Momoven (recogida mié 14 09:00, devolución dom 18 por la tarde)</span></label></li>
-    <li><label><input type="checkbox" data-id="tiempo"><span>Revisar el tiempo el domingo 11 o lunes 12</span></label></li>
-    <li><label><input type="checkbox" data-id="sare"><span>Confirmar cama en el Gîte Haranederea (Sare) para el viernes 16</span></label></li>
-    <li><label><input type="checkbox" data-id="luz"><span>Reservar habitación en Luz-Saint-Sauveur para el jueves 15</span></label></li>
-    <li><label><input type="checkbox" data-id="jaca"><span>Confirmar precio y plaza en el Albergue de Jaca para el sábado 17</span></label></li>
-    <li><label><input type="checkbox" data-id="gpx"><span>Importar los GPX en calimoto, activar Premium y probar un día</span></label></li>
-    <li><label><input type="checkbox" data-id="r2"><span>Mirar la víspera los horarios de la R2 Sud Sants → Segur de Calafell</span></label></li>
-  </ul>
-  <h3>Equipo</h3>
-  <ul class="check">
-    <li><label><input type="checkbox" data-id="agua"><span>Traje de agua completo (chaqueta y pantalón)</span></label></li>
-    <li><label><input type="checkbox" data-id="termicas"><span>Capas térmicas y forro de invierno</span></label></li>
-    <li><label><input type="checkbox" data-id="guantes"><span>Guantes de invierno impermeables y guantes de repuesto</span></label></li>
-    <li><label><input type="checkbox" data-id="cuello"><span>Cubrecuellos</span></label></li>
-    <li><label><input type="checkbox" data-id="saco"><span>Saco de dormir</span></label></li>
-    <li><label><input type="checkbox" data-id="carga"><span>Mapas offline, cargador USB y batería externa</span></label></li>
-    <li><label><input type="checkbox" data-id="docs"><span>Carnet A2, DNI, contrato y póliza del alquiler, teléfono de asistencia</span></label></li>
-  </ul>
-  <h3>Durante el viaje</h3>
+  <h2>Durante el viaje</h2>
+  <p class="muted">Todo lo de antes de salir está hecho: tren, moto, permiso del dueño, alojamientos y GPX. Las marcas se guardan en este navegador.</p>
   <ul class="check">
     <li><label><input type="checkbox" data-id="fotos"><span>Fotos y vídeo de la moto al recogerla; kilometraje anotado</span></label></li>
     <li><label><input type="checkbox" data-id="kmnoche"><span>Anotar el kilometraje cada noche</span></label></li>
     <li><label><input type="checkbox" data-id="puertos"><span>Revisar la víspera el estado de Envalira, Tourmalet y Aubisque</span></label></li>
     <li><label><input type="checkbox" data-id="gas"><span>Llenar el depósito en Andorra y en Dantxarinea</span></label></li>
     <li><label><input type="checkbox" data-id="foix"><span>Llamar a Foix por la mañana del miércoles si vas a llegar tarde</span></label></li>
+    <li><label><input type="checkbox" data-id="andorra"><span>Datos móviles off antes de entrar en Andorra (no hay roaming UE)</span></label></li>
+    <li><label><input type="checkbox" data-id="cam"><span>Cada noche: cargar baterías de la Insta360 y revisar espacio de la tarjeta</span></label></li>
     <li><label><input type="checkbox" data-id="devol"><span>Fotos y kilometraje al devolver la moto</span></label></li>
   </ul>
+  <p>El equipaje, maleta por maleta, en su <a href="equipaje.html">checklist de equipaje</a>.</p>
   <div class="btns noprint"><button class="btn" type="button" id="resetChecks">Desmarcar todo</button></div>
 </section>
 
@@ -579,9 +618,13 @@ const DAYS = [
      ["Al devolver","Fotos y kilometraje."],
      ["A pie en Barcelona","Desde Plaza España, sube las escaleras del MNAC a Montjuïc para ver la ciudad desde arriba."]],
    maps:["Jaca, Spain",SEGUR,["Huesca","Lleida"]]},
-  {id:"d19", date:"2026-10-19", tab:"Lun 19", title:"Vuelta a casa", km:0, night:"Casa",
-   route:"Tren AVE Barcelona-Sants 15:41 → Córdoba 20:59",
-   facts:[["Opción A","Solo si no devolviste el domingo: salir 08:00 de Plaza España, moto a las 09:00 en Segur y Rodalies de vuelta a Sants."]]}
+  {id:"d19", date:"2026-10-19", tab:"Lun 19", title:"Día libre en Barcelona", km:0, night:"Barcelona (amiga)",
+   route:"Sin moto (salvo opción A). Día para Barcelona con la maleta que dejaste en casa de tu amiga.",
+   facts:[["Opción A","Solo si no devolviste el domingo: salir 08:00 de Plaza España, moto a las 09:00 en Segur y Rodalies de vuelta a Sants."],
+     ["Equipaje","Vacía las bolsas de la moto: ropa sucia a la bolsa grande de la maleta de Barcelona."]]},
+  {id:"d20", date:"2026-10-20", tab:"Mar 20", title:"Vuelta a casa", km:0, night:"Casa",
+   route:"Tren Barcelona-Sants → Córdoba (horario en tu billete)",
+   facts:[["Antes de salir","Revisa que no se queda nada en casa de tu amiga: cargadores, casco y la mochila plegable."]]}
 ];
 const INCL = 1500;
 
@@ -658,5 +701,6 @@ document.getElementById("copyMsg").addEventListener("click",async e=>{const t=do
   svg.style.color="var(--ink)";svg.innerHTML=s;
 })();
 </script>
+<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 </body>
 </html>
